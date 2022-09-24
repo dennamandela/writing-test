@@ -84,9 +84,25 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 5. ```<body>``` yaitu tag bagian body dari dokumen.
 
 - HTML Element terdiri opening tag dan closing tag.
- 1. opening tag: ```<p>```
- 2. content: Hello World
- 3. closing tag: ```</p>```
+1. opening tag: ```<p>```
+2. content: Hello World
+3. closing tag: ```</p>```
+
+- Attribute adalah properties dari sebuah HTML Element seperti id, class, src, href, dll.
+- HTML Comment dapat memberikan penjelasan atau keterangan maksud dari line code yang kita kerjakan ```<!-- -->```
+- Cara menjalankan HTML bisa secara manual pada browser dan bisa menggunakan live server dari VS Code.
+- Tag HTML Populer yang Wajib Programmer Pemula Ketahui
+1. Tag untuk Membuat tulisan tebal dan miring, code ```<b>Bold</b>``` dan ```<i>Miring</i>```
+2. Tag HTML untuk membuat tulisan dengan link ```<a href=”https://mandela.com”> Mandela </a>```
+3. Tag Untuk Membuat Daftar/List
+  - Ordered List
+    ```<ol> Mandela </ol>```
+  - Unordered List
+    ```<ul> Mandela </ul>```
+4. Tag Untuk Menyisipkan Gambar
+```<img src=framework.jpg”>```
+
+  
 
 
 
