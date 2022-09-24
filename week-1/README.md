@@ -41,6 +41,7 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - konfigurasi git
 
   git config --global user.name "dennamandela"
+  
   git config --global user.email denna.mandela13@gmail.com
   
 - Membuat repository
