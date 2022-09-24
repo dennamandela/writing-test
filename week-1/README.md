@@ -5,7 +5,7 @@
 
   Command Line Interface ada banyak macamnya. CLI bawaan sistem operasi contoh nya adalah cmd.exe milik windows atau bash dan zsh di sistem operasi mirip Unix.
   
-- mengakses CLI dan menggunakan bash ![Command Line Interface](writing-and-presentation-test/week-1/mengakses-cli.png)
+- mengakses CLI dan menggunakan bash ![Command Line Interface](blob/master/week-1/mengakses-cli.png)
 ### A. Filesystem
 - Sebuah filesystem mengatur bagaimana data disimpan di dalam sebuah system
   
