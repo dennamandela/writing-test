@@ -56,6 +56,26 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - git push -u origin main digunakan untuk mengirimkan perubahan file yang dilakukan setelah di commit ke remote repository.
 - git clone digunakan untuk membuat salinan repository lokal.
 
+## HTML
+- HTML atau Hyoertext Markup Language digunakan untuk menampilkan konten pada browser.
+- Tools yang dibutuhkan untuk membuat HTML yaitu Browser dan Code Editor.
+- Visual Studio Code adalah code editor yang dikembangkan oleh tim Engineer Microsoft.
+- Keunggulan Visual Studio Code dapat digunakan di Windows, Mac, dan juga Linux.
+- HTML Structure
+
+<!DOCTYPE html>
+<html lang="en"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</title>
+<body>
+  This is my very first page writing with HTML
+</body>
+</html>
+
+
 
 
   
