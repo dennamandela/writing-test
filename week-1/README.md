@@ -28,6 +28,9 @@
 - cp untuk mengcopy files atau direktori
 - mv untuk memindahkan files atau direktori. bisa digunakan untuk rename.
 - rm untuk menghapus file atau direktori.
+
+## Git & GitHub Dasar
+
   
 
 
