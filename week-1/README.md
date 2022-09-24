@@ -95,9 +95,9 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 1. Tag untuk Membuat tulisan tebal dan miring, code ```<b>Bold</b>``` dan ```<i>Miring</i>```
 2. Tag HTML untuk membuat tulisan dengan link ```<a href=”https://mandela.com”> Mandela </a>```
 3. Tag Untuk Membuat Daftar/List
-  - Ordered List
+  **Ordered List**
     ```<ol> Mandela </ol>```
-  - Unordered List
+  **Unordered List**
     ```<ul> Mandela </ul>```
 4. Tag Untuk Menyisipkan Gambar
 ```<img src=framework.jpg”>```
