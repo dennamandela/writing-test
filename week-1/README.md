@@ -91,19 +91,27 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - Attribute adalah properties dari sebuah HTML Element seperti id, class, src, href, dll.
 - HTML Comment dapat memberikan penjelasan atau keterangan maksud dari line code yang kita kerjakan ```<!-- -->```
 - Cara menjalankan HTML bisa secara manual pada browser dan bisa menggunakan live server dari VS Code.
-- Tag HTML Populer yang Wajib Programmer Pemula Ketahui
-1. Tag untuk Membuat tulisan tebal dan miring, code ```<b>Bold</b>``` dan ```<i>Miring</i>```
-2. Tag HTML untuk membuat tulisan dengan link ```<a href=”https://mandela.com”> Mandela </a>```
-3. Tag Untuk Membuat Daftar/List
+- Tag HTML Populer yang Wajib Programmer Pemula Ketahui yaitu img, video, table, dan form.
 
-    **Ordered List**
-      ```<ol> Mandela </ol>```
+  Contoh Pembuatan Video:
+  
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  </head> 
+  <body>
     
-    **Unordered List**
-      ```<ul> Mandela </ul>```
+    <video controls>
+      <source src="movie.mp4" type="video/mp4">
+    </video>
     
-4. Tag Untuk Menyisipkan Gambar
-```<img src=framework.jpg”>```
+  </body>
+</html>
+```
 
   
 
