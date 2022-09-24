@@ -39,10 +39,14 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 
 ### Setup Awal
 -konfigurasi git
+
   git config --global user.name "dennamandela"
   git config --global user.email denna.mandela13@gmail.com
+  
 - Membuat repository
+
   git init (dilakukan didalam folder yang dibuat)
+  
 - git status digunakan untuk mengetahui sebuah status dari repository lokal.
 - git add digunakan untuk menambahkan file baru di repository yang dipilih.
 - git commit -m "commit pertama "digunakan untuk menyimpan perubahan yang sudah dilakukan, namun tidak ada perubahan yang terjadi pada remote repository.
