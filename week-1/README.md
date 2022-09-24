@@ -13,18 +13,15 @@
 
   ![Command Line Interface](/week-1/filesystem.png)
 
-### B. Command untuk Navigasi
+### B. Perintah Dasar CLI (Command Line Interface 
 - pwd (print working directory) untuk melihat nama direktori kita berada saat ini.
 - ls (lists) untuk melihat isi dari direktori.
 - cd (change directory) untuk pindah ke direktori lain.
-### C. Membuat files & direktori
 - touch untuk membuat sebuah file
 - mkdir untuk membuat sebuah direktori
-### D. Melihat isi files
 - head untuk melihat beberapa line awal dari sebuah file text
 - tail untuk melihat beberapa line awal dari sebuah file text
 - cat untuk melihat isi sebuah file
-### E. Menyalin, memindahkan, dan menghapus file & direktori
 - cp untuk mengcopy files atau direktori
 - mv untuk memindahkan files atau direktori. bisa digunakan untuk rename.
 - rm untuk menghapus file atau direktori.
