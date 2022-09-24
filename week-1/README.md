@@ -31,10 +31,13 @@
 
 ## Git & GitHub Dasar
 - GIT adalah Tools untuk programmer
-- GIT sebagai Version Control System 
+- GIT sebagai Version Control System tugasnya adalah **mencatat** setiap **perubahan** pada **File** (termasuk code yang kita buat) pada suatu proyek baik dikerjakan secara **individu** maupun **tim**.
+- Git adalah aplikasi yang dapat melacak setiap perubahan yang terjadi pada suatu folder atau file.
+- Perbedaan Git dan GitHub yaitu: Developer yang menggunakan Git dapat menggunakan command-line tool, yaitu pengubah kode dan dapat digabungkan menuju perangkat lokal. sedangkan, GitHub menyediakan interface grafis berbasis cloud sebagai tempat untuk melakukan seluruh tugas.
+- MENGAPA harus menggunakan GIT dan Github? Dengan menggunakan GIT dan Github, akan bisa bekerja dalam sebuat tim. Tujuan besarnya adalah bisa berkolaborasi mengerjakan proyek yang sama tanpa harus repot copy paste folder aplikasi yang terupdate.
+Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program dahulu untuk berkolaborasi. Kamu bisa membuat file didalam projek yang sama atau membuat code di file yang sama dan menyatukannya saat sudah selesai.
 
-  tugasnya adalah **mencatat** setiap **perubahan** pada **File** (termasuk code yang kita buat) pada suatu proyek baik dikerjakan secara **individu** maupun **tim**.
-- perbedaan git dan github yaitu: Developer yang menggunakan Git dapat menggunakan command-line tool, yaitu pengubah kode dan dapat digabungkan menuju perangkat lokal sedangkan, GitHub menyediakan interface grafis berbasis cloud sebagai tempat untuk melakukan seluruh tugas.
+
 
   
 
