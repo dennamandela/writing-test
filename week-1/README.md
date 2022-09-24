@@ -62,7 +62,7 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - Visual Studio Code adalah code editor yang dikembangkan oleh tim Engineer Microsoft.
 - Keunggulan Visual Studio Code dapat digunakan di Windows, Mac, dan juga Linux.
 - HTML Structure
-
+```
 <!DOCTYPE html>
 <html lang="en"
 <head>
@@ -74,6 +74,7 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   This is my very first page writing with HTML
 </body>
 </html>
+```
 
 
 
