@@ -77,11 +77,11 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 ```
 - Tag-tag wajib
 
-1. <!DOCTYPE html> yaitu untuk deklarasi type dokumen.
-2. <html> yaitu tag utama dalam HTML.
-3. <head> yaitu untuk bagian kepala dari dokumen.
-4. <title> yaitu untuk judul web
-5. <body> yaitu bagian body dari dokumen.
+1. !DOCTYPE html yaitu untuk deklarasi type dokumen.
+2. html yaitu tag utama dalam HTML.
+3. head yaitu untuk bagian kepala dari dokumen.
+4. title yaitu untuk judul web
+5. body yaitu bagian body dari dokumen.
 
 - HTML Element
 
