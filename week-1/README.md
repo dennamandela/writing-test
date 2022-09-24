@@ -38,7 +38,7 @@
 Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program dahulu untuk berkolaborasi. Kamu bisa membuat file didalam projek yang sama atau membuat code di file yang sama dan menyatukannya saat sudah selesai.
 
 ### Setup Awal
--konfigurasi git
+- konfigurasi git
 
   git config --global user.name "dennamandela"
   git config --global user.email denna.mandela13@gmail.com
