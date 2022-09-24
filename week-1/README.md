@@ -30,6 +30,10 @@
 - rm untuk menghapus file atau direktori.
 
 ## Git & GitHub Dasar
+- GIT adalah Tools untuk programmer
+- GIT sebagai Version Control System 
+
+  tugasnya adalah **mencatat** setiap **perubahan** pada **File** (termasuk code yang kita buat) pada suatu proyek baik dikerjakan secara **individu** maupun **tim**.
 
   
 
