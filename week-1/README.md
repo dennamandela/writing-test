@@ -77,15 +77,15 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 ```
 - Tag-tag wajib
 
-1. ```<!DOCTYPE html>``` yaitu untuk deklarasi type dokumen.
+1. ```<!DOCTYPE html>``` yaitu tag untuk deklarasi type dokumen.
 2. ```<html>``` yaitu tag utama dalam HTML.
-3. ```<head>``` yaitu untuk bagian kepala dari dokumen.
-4. ```<title>``` yaitu untuk judul web
-5. ```<body>``` yaitu bagian body dari dokumen.
+3. ```<head>``` yaitu tag untuk bagian kepala dari dokumen.
+4. ```<title>``` yaitu tag untuk judul web
+5. ```<body>``` yaitu tag bagian body dari dokumen.
 
 - HTML Element terdiri opening tag dan closing tag.
  1. opening tag: ```<p>```
- 2. content: Denna Mandela
+ 2. content: Hello World
  3. closing tag: ```</p>```
 
 
