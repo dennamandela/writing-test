@@ -96,11 +96,11 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 2. Tag HTML untuk membuat tulisan dengan link ```<a href=”https://mandela.com”> Mandela </a>```
 3. Tag Untuk Membuat Daftar/List
 
-  **Ordered List**
-    ```<ol> Mandela </ol>```
+    **Ordered List**
+      ```<ol> Mandela </ol>```
     
-  **Unordered List**
-    ```<ul> Mandela </ul>```
+    **Unordered List**
+      ```<ul> Mandela </ul>```
     
 4. Tag Untuk Menyisipkan Gambar
 ```<img src=framework.jpg”>```
