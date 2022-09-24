@@ -84,8 +84,9 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 5. body yaitu bagian body dari dokumen.
 
 - HTML Element terdiri opening tag dan closing tag.
- 1. opening tag: <>
- 2. closing tag: </>
+ 1. opening tag: ```<p>```
+ 2. content: Denna Mandela
+ 3. closing tag: ```</p>```
 
 
 
