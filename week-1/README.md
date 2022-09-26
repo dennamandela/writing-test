@@ -428,7 +428,46 @@ if(stopLight === 'red') {
   console.log('Caution, unknown!');
 }
 ```
-- Truthy and Falsy
+- Truthy and Falsy digunakan untuk mengecek apakah variabel telah terisi namun tidak mementingkan nilainya.
+- Contoh Truthy and Falsy
+```
+let myVariable = 'Hacktiv8';
+if (myVariable) {
+  console.log(myVariable)
+} else {
+  console.log('Variable tidak ada')
+}
+```
+- Truthy and Falsy Assignment: Analoginya adalah jika memiliki sebuah website dan meminta inputan username lalu menampilkannya. Jika usernamenya kosong bisa isi nilai tersebut.
+- Contoh Truthy and Falsy Assignment
+```
+let defaultName;
+if (username) {
+  defaultName = username;
+} else {
+  defaultName = 'Stranger';
+}
+```
+- Switch Case Conditional digunakan untuk jika kondisi dan percabangan terlalu banyak
+- Contoh Switch Case
+```
+let warna = 'merah';
+ 
+switch (warna){
+  case 'hitam':
+    console.log('Warna Hitam');
+    break;
+  case 'merah':
+    console.log('Warna Merah');
+    break;
+  case 'Kuning':
+    console.log('Warna Kuning');
+    break;
+  default:
+    console.log('warna tidak ada');
+}
+```
+
 
 
 
