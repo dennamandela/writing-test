@@ -213,7 +213,21 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   }
   ```
 
+- Responsive web design atau desain web responsif adalah sebuah teknik atau metode bagi web designer untuk membuat suatu layout website yang dapat menyesuaikan diri sesuai dengan ukuran layar pengguna.
   
+  Fluid Grid: sebuah grid atau garis-garis batas yang menentukan letak suatu komponen dalam desain.
+  
+  Media queries: untuk dapat mengambil data mengenai ukuran layar yang digunakan untuk menampilkan konten.
+  
+  Responsive media: media seperti foto dan video dapat ditampilkan dengan baik di berbagai ukuran layar.
+
+- Flexbox yaitu memberikan container kemampuan untuk mengatur panjang, lebar, dan posisi item-item yang berada di dalamnya agar memaksimalkan ruang yang ada.
+- beberapa property container flexbox diantaranya:
+  
+  flex-direction: Menentukkan arah (direction) yang akan diberlakukan untuk item-item yang ada pada container flexbox.
+  flex-wrap: untuk mendefinisikan bahwa elemen item di dalam container flexbox tidak harus disejajarkan dalam satu baris.
+  justify-content: untuk mensejajarkan item-item diantara flexbox agar container dari flexbox
+  align-items: bagaimana item-item pada container flex tersebut diletakkan sepanjang garis tegak lurus pada sumbu utama (cross-axis).  
   
 
 
