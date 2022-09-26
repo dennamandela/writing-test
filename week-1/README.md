@@ -132,7 +132,7 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   </article>
 
   <footer>
-    Copyright &copy; 2020 by Petani Kode
+    Copyright &copy; 2020 by Denna Mandela
   </footer>
   ```
 - Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah kita kerjakan supaya bisa digunakan oleh orang-orang.
