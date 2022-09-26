@@ -254,7 +254,7 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   
   - Deskriptif 
   - Flowchart
-  - Pseudo Code
+  - Pseudocode
 
 - Contoh Algoritma
 ```
@@ -266,7 +266,44 @@ Isi Gelas dengan air
 Jika air sudah penuh
 Air siap diminum
 ```
+  
+- Flowchart atau bagan alur adalah diagram yang menampilkan langkah-langkah dan keputusan untuk melakukan sebuah proses dari suatu program.
+- Fungsi utama dari flowchart adalah memberi gambaran jalannya sebuah program dari satu proses ke proses lainnya. 
+- Jenis flowchart
+  - Flowchart dokumen: untuk menelusuri alur form dari satu bagian ke bagian yang lain, termasuk bagaimana laporan diproses, dicatat, dan disimpan.
+  - Flowchart program: menggambarkan secara rinci prosedur dari proses program.
+  - Flowchart proses: cara penggambaran rekayasa industrial dengan cara merinci dan menganalisis langkah-langkah selanjutnya dalam suatu prosedur atau sistem.
+  - Flowchart sistem: flowchart yang menampilkan tahapan atau proses kerja yang sedang berlangsung di dalam sistem secara menyeluruh.
+  - Flowchart skematik: menampilkan alur prosedur suatu sistem, hampir sama dengan flowchart sistem.
 
+- Contoh Flowchart:
+![Contoh Flowchart](/week-1/Contoh-flowchart.jpg "Contoh Flowchart")
+
+- Pseudocode adalah menuliskan algoritma dengan umumnya bahasa inggris sebelum kita implementasikan ke bahasa pemograman tertentu.
+- Panduan menulis Pseudocode
+  - Menggunakan HURUF BESAR pada kata kunci (key commands).
+  - 1 statement =  1 baris 
+  - Gunakan indentasi
+  - Please please be specific
+  - simpel.
+
+- Contoh Pseudocode
+```
+Menampilkan deret angka 1 - 10
+deklarasi
+	i ← 1
+deskripsi
+	while i <= 10
+		print i
+		i = i + 1
+	end
+```
+- Jenis-jenis Pseudocode
+  - Procedural: cara berpikir secara runtun
+  - Conditional: digunakan saat dibutuhkan percabangan kasus.
+  - Looping: dapat melakukan sebuah proses yang sama berulang-ulang.
+  - Recursive: pola pikir dalam algoritma yang memanggil method/function didalam sebuah function.
+        
 
   
 
