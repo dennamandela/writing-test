@@ -291,21 +291,65 @@ Air siap diminum
 ```
 Menampilkan deret angka 1 - 10
 deklarasi
-	i ← 1
+  i ← 1
 deskripsi
-	while i <= 10
-		print i
-		i = i + 1
-	end
+  while i <= 10
+    print i
+    i = i + 1
+  end
 ```
 - Jenis-jenis Pseudocode
   - Procedural: cara berpikir secara runtun
   - Conditional: digunakan saat dibutuhkan percabangan kasus.
   - Looping: dapat melakukan sebuah proses yang sama berulang-ulang.
   - Recursive: pola pikir dalam algoritma yang memanggil method/function didalam sebuah function.
-        
 
-  
+## JavaScript
+### JavaScript Introduction
+- JavaScript adalah bahasa pemrograman yang sangat powerful yang digunakan untuk logic pada sebuah website.
+- Cara menjalankan JavaScript yaitu melalui browser pada device setiap user.
+- Pada JavaScript dikenal dengan istilah **Syntax** dan **Statement**.
+  > Syntax adalah seperangkat aturan yang menentukan program JavaScript yang terstruktur dengan benar.
+  >
+  > Statement adalah sebuah intruksi untuk dieksekusi oleh web browser.
+
+- Contoh Syntax JavaScript
+  - Alert()
+  - Prompt()
+  - Confirm()
+
+- Console Log adalah tempat untuk cek logic dan tempat untuk melakukan debugging (mengetahui error pada code) pada pemograman web. 
+- Comments adalah sintaks yang digunakan untuk memberi keterangan tentang suatu statement. 
+  - Single Comments ```//```
+  - Multiline Comments ```/* */
+
+### Tipe Data (Data Types)
+- *Tipe Data* adalah jenis-jenis data yang bisa disimpan di dalam variabel.
+- Ada 6 Tipe data pada JavaScript:
+  - number: tipe data yang mengandung semua angka termasuk angka desimal.
+  - string: grup karakter yang ada pada keyboard laptop/PC kita yaitu letters (huruf), number (angka), spaces (spasi), symbol, dan lainnya. 
+  - boolean: tipe data yang hanya mempunyai 2 buah nilai.
+  - null: tipe data yang diartikan bahwa sebuah variable/data tidak memiliki nilai.
+  - undefined: tipe data yang merepresentasikan varibel/data yang tidak memiliki nilai.
+  - object: koleksi data yang saling berhubungan (related). Tipe data pbject dapat menyimpan data dengan tipe data apapun (number, string, boolean, dan lainnya).
+
+### Variabel
+- Variabel adalah container/tempat untuk menyimpan sebuah nilai.
+- 3 hal yang dapat dilakukan pada variabel
+  - Membuat variabel dengan nama yang jelas dan menggambarkan tentang data tersebut
+  - Menyimpan dan mengupdate informasi/data yang disimpan
+  - Mendapatkan/menampilan data yang tersimpan
+	
+- Ada 3 cara mendefinisikan sebuah variabel.
+  - var
+  - let
+  - const
+
+### Operator
+
+
+ 
+
 
 
 
