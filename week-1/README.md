@@ -467,30 +467,52 @@ switch (warna){
     console.log('warna tidak ada');
 }
 ```
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
+- Ternary Operator merupakan short-syntax dari statement if … else.
+- Contoh Ternary Operator
+```
+let isNowSale = true;
+isNowSale ? console.log('Lets Shopping now') : console.log('Shopping later');
+```
+### Looping
+- Looping adalah statement yang mengulang sebuah instruksi hingga kondisi terpenuhi atau jika kondisi stop/berhenti tercapai.
+- Ada 4 macam looping yaitu:
+  - Foor Loop
+  - While Loop
+  - Do While
+  - Nested Loop
+- For Loop merupakan instruksi pengulangan yang dapat kita berikan pada program yang kita kembangkan.
+- Contoh Foor Loop
+```
+let angka = 1;
+for (angka; angka <= 10; angka++) {
+  console.log(angka);
+}
+```
+- While Loop akan menjalankan instruksi pengulangan kondisi bernilai TRUE.
+- Contoh While Loop
+```
+let angka = 1;
+while (angka <= 10) {
+  console.log(angka);
+  angka++;
+}
+```
+- Do While 
+```
+do {
+  console.log("Nyalakan mesin!");
+  bensin--;
+} while(bensin > 0)
+```
+- Nested Loop digunakan untuk membuat looping didalam looping.
+- Contoh Nested Loop
+```
+for (let i = 1; i <= 10; i++) {
+  for (let j = 1; j <= i; j++) {
+    document.write('<br />')
+    document.write('Baris', +i);
+    document.write('<br />')
+    document.write('Kolom', +j);
+  }
+}
+```
