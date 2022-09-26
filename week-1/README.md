@@ -161,6 +161,18 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   <style></style>
   ```
   
+  External CSS adalah kode CSS yang diletakkan di luar dokumen HTML sebagai file .css.
+
+- Sintaks CSS terdiri dari tiga bagian: pemilih atau selektor (selector), sifat atau properti (property), dan nilai (value).
+- Contoh sintaks dasar dari CSS:
+  
+  ```
+  h1 {
+    color: red;
+  }
+  ```
+
+
 
 
   
