@@ -109,6 +109,35 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   </body>
 </html>
 ```
+- Semantic HTMl yaitu menggunakan element HTMl sesuai dengan kebutukan konten. contohnya: article, aside, details, figcaption, footer, dll.
+- Kegunaan Semantic HTML yaitu, meningkatkan Accessibility, meningkatkan SEO, lebih mudah di maintain.
+- contoh kode Semantic HTML:
+```
+<header>
+    <h1>Belajar Elemen Semantik di HTML</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+  </nav>
+
+  <article>
+    <h1>Tutorial Semantik Elemen untuk Pemula</h1>
+    <p>Semantik elemen adalah elemen yang memiliki makna dan tujuan.
+      Tujuannya agar kode HTML mudah dibaca dan tidak ada penyalahgunaan tag.
+      Elemen semantik bagus untuk SEO dan juga dapat meningkatkan accessibility.
+    </p>
+  </article>
+
+  <footer>
+    Copyright &copy; 2020 by Petani Kode
+  </footer>
+  ```
+- Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah kita kerjakan supaya bisa digunakan oleh orang-orang.
+- Cara mendeploy html menggunakan tools bernama Netlify.
+
 
   
 
