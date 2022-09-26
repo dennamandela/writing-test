@@ -237,11 +237,11 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - Struktur data adalah cara penyimpanan , pengorganisasian , dan pengaturan data di dalam media penyimpanan komputer sehingga data tersebut dapat digunakan secara efisien. Algoritma adalah sederetan langkah-langkah logis yang disusun secara sistematis untuk memecahkan suatu masalah.
 - Ciri-ciri Algoritma
   
-  Input: memiliki 0 atau lebih inputan.
-  Ouput: memiliki min 1 buah output
-  Definiteness: Instruksi jelas tidak ambigu
-  Finitess: Memiliki titik berhenti (stop)
-  Effectiveness: Sebisa mungkin tepat sasaran dan efisien
+  - Input: memiliki 0 atau lebih inputan.
+  - Ouput: memiliki min 1 buah output
+  - Definiteness: Instruksi jelas tidak ambigu
+  - Finitess: Memiliki titik berhenti (stop)
+  - Effectiveness: Sebisa mungkin tepat sasaran dan efisien
 
 - Jenis Proses Algoritma
   
