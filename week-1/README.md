@@ -321,7 +321,7 @@ deskripsi
 - Console Log adalah tempat untuk cek logic dan tempat untuk melakukan debugging (mengetahui error pada code) pada pemograman web. 
 - Comments adalah sintaks yang digunakan untuk memberi keterangan tentang suatu statement. 
   - Single Comments ```//```
-  - Multiline Comments ```/* */
+  - Multiline Comments ```/* */```
 
 ### Tipe Data (Data Types)
 - *Tipe Data* adalah jenis-jenis data yang bisa disimpan di dalam variabel.
@@ -346,6 +346,52 @@ deskripsi
   - const
 
 ### Operator
+- Assignment Operator (=) digunakan untuk menyimpan sebuah nilai pada variabel, Contohnya: ```let myName = 'Mandela';```
+- Mathematical Assignment Operator merupakan **Operator** yang biasa digunakan pada operasi perhitungan matematis, atau bisa disebut juga dengan **Operator** yang digunakan untuk melakukan perhitungan.
+- Contohnya:
+``` 
+let 4 = 4;
+w = w + 1;
+
+console.log(w); // Output: 5
+```
+- Increment dan Decrement untuk menambah atau mengurangi sebesar 1 nilai.
+- Contohnya:
+```
+let a = 10;
+a++;
+console.log(a); // Output: 11
+
+let b = 20;
+b--;
+console.log(b); // Output: 19
+```
+- Arithmetic Operator adalah operator yang melibatkan operasi matematika.
+  - Tambah (+)
+  - Kurang (-) 
+  - Perkalian (*)
+  - Pembagian (/)
+  - Modulus (%)
+
+- Comparison Operator adalah operator yang membandingkan satu nilai dengan nilai lainnya.
+  - Lebih kecil dari: ```<```
+  - Lebih besar dari: ```>```
+  - Lebih kecil atau sama dengan: ```<=```
+  - Lebih besar atau sama dengan: ```>=```
+  - Sama dengan: ```===```
+  - Tidak sama dengan: ```!==```
+
+- Logical Operator digunakan untuk sebuah CONDITIONAL pada pemograman.
+- Menghasilkan nilai BOOLEAN yaitu TRUE or FALSE.
+- Simbol dari Logical Operator adalah sebagai berikut:
+  - AND operator: menghasilkan nilai true jika kedua atau semua premis bernilai TRUE ```&&```
+  - OR operator: menghasilkan nilai true jika salah satu premis mengandung nilai TRUE ```||```
+  - NOT operator: membalikkan sebuah nilai BOOLEAN. TRUE menjadi FALSE dan sebaliknya. ```!```
+
+
+
+
+
 
 
  
