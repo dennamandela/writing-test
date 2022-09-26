@@ -388,6 +388,50 @@ console.log(b); // Output: 19
   - OR operator: menghasilkan nilai true jika salah satu premis mengandung nilai TRUE ```||```
   - NOT operator: membalikkan sebuah nilai BOOLEAN. TRUE menjadi FALSE dan sebaliknya. ```!```
 
+### Conditional
+- Conditional merupakan *statement percabangan* yang menggambarkan suatu *kondisi*.
+- Conditional statement akan mengecek kondisi spesifik dan menjalankan perintah berdasarkan kondisi tersebut
+- Contoh Conditional dalam kehidupan
+  - Jika cuaca cerah hari ini, maka kita akan pergi keluar
+  - Jika alarm berbunyi, maka kita akan bangun dari tidur
+  - Jika lelah, maka kita akan istirahat
+  - Jika lapar, kita akan makan
+- Contoh IF Statement
+```
+let lapar = true;
+if (lapar) {
+  console.log('Yuk makan');
+};
+```
+- IF ... ELSE Statement: Else akan mengeksekusi sebuah statement/code jika suatu kondisi bernilai **FALSE**
+- Contoh IF ... ELSE Statement
+```
+let lapar = false;
+if (lapar) {
+  console.log('Yuk makan');
+} else {
+  console.log('Tidak makan');
+}
+```
+- IF .. ELSE IF Statement dapat digunakan jika mempunyai berbagai kondisi.
+Contoh IF .. ELSE IF Statement
+```
+let stopLight = 'red';
+	
+if(stopLight === 'red') {
+  console.log('Stop!');
+} else if (stopLight === 'yellow') {
+  console.log('Slow down.');
+} else if(stopLight === 'green') {
+  console.log('Go!');
+} else {
+  console.log('Caution, unknown!');
+}
+```
+- Truthy and Falsy
+
+
+
 
 
 
