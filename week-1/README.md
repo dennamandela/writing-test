@@ -138,6 +138,30 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah kita kerjakan supaya bisa digunakan oleh orang-orang.
 - Cara mendeploy html menggunakan tools bernama Netlify.
 
+## CSS
+- CSS atau *Cascading Style Sheet* adalah bahasa yang digunakan untuk mendesain halaman website.
+- Struktur CSS
+```
+.elementHTML {
+  property : value
+}
+```
+- CSS Comment yaitu memberikan keterangan maksud dari line code yang dikerjakan ``` /* */```.
+- Ada 3 cara menyisipkan CSS ke dalam HTML.
+
+Inline styles adalah kita menambahkan CSS pada **attribute** element HTML
+
+```
+<p style="color: coral; font-size: 36px;">This is paragraph using inline styles</p>
+```
+
+Internal CSS adalah kode CSS yang ditulis dalam tag<style> dan kode HTML yang ditulis di bagian header file HTML.
+
+```
+<style></style>
+```
+  
+
 
   
 
