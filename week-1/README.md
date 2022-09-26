@@ -172,6 +172,50 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
   }
   ```
 
+- Ada beberapa cara yang bisa digunakan sesuai kebutuhan untuk mendesain element HTML di CSS.
+  
+  Tag Name: Selektor ini akan memilih elemen berdasarkan nama tag.
+  
+  ```
+  p {
+    color: blue;
+  }
+  ```
+  
+  Tag Class: selektor yang memilih elemen berdasarkan nama class yang diberikan.
+  
+  ```
+  .pink {
+    color: white;
+    background: pink;
+    padding: 5px;
+  }
+  ```
+  
+  Tag ID: Selektor ID hampir sama dengan class. Bedanya, ID bersifat unik. Hanya boleh digunakan oleh satu elemen saja.
+  
+  ```
+  #header {
+    background: teal;
+    color: white;
+    height: 100px;
+    padding: 50px;
+  }
+  ```
+
+  Nested Element: setiap element memiliki parent dan child.
+  
+  !important CSS: jika pada styling CSS menggunakan !important, maka styling sebelumnya baik itu ID Name atau Class Name akan di override.
+  
+  ```
+  h1.title {
+    color: green;
+  }
+  ```
+
+  
+  
+
 
 
 
