@@ -13,7 +13,7 @@
 
   ![Command Line Interface](/week-1/filesystem.png)
 
-### B. Perintah Dasar CLI (Command Line Interface 
+### B. Perintah Dasar CLI (Command Line Interface)
 - pwd (print working directory) untuk melihat nama direktori kita berada saat ini.
 - ls (lists) untuk melihat isi dari direktori.
 - cd (change directory) untuk pindah ke direktori lain.
@@ -26,7 +26,7 @@
 - mv untuk memindahkan files atau direktori. bisa digunakan untuk rename.
 - rm untuk menghapus file atau direktori.
 
-## Git & GitHub Dasar
+## Git & GitHub
 - GIT adalah Tools untuk programmer
 - GIT sebagai Version Control System, tugasnya adalah **mencatat** setiap **perubahan** pada **File** (termasuk code yang kita buat) pada suatu proyek baik dikerjakan secara **individu** maupun **tim**.
 - Git adalah aplikasi yang dapat melacak setiap perubahan yang terjadi pada suatu folder atau file.
@@ -36,15 +36,10 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 
 ### Setup Awal
 - konfigurasi git
-
-  git config --global user.name "dennamandela"
-  
-  git config --global user.email denna.mandela13@gmail.com
-  
+  - git config --global user.name "dennamandela"
+  - git config --global user.email "denna.mandela13@gmail.com"
 - Membuat repository
-
-  git init (dilakukan didalam folder yang dibuat)
-  
+  - git init (dilakukan didalam folder yang dibuat)
 - git status digunakan untuk mengetahui sebuah status dari repository lokal.
 - git add digunakan untuk menambahkan file baru di repository yang dipilih.
 - git commit -m "commit pertama "digunakan untuk menyimpan perubahan yang sudah dilakukan, namun tidak ada perubahan yang terjadi pada remote repository.
@@ -54,7 +49,7 @@ Dan juga tidak perlu menunggu rekan dalam satu tim menyelesaikan suatu program d
 - git clone digunakan untuk membuat salinan repository lokal.
 
 ## HTML
-- HTML atau Hyoertext Markup Language digunakan untuk menampilkan konten pada browser.
+- HTML atau Hypertext Markup Language digunakan untuk menampilkan konten pada browser.
 - Tools yang dibutuhkan untuk membuat HTML yaitu Browser dan Code Editor.
 - Visual Studio Code adalah code editor yang dikembangkan oleh tim Engineer Microsoft.
 - Keunggulan Visual Studio Code dapat digunakan di Windows, Mac, dan juga Linux.
