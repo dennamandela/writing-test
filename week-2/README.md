@@ -101,3 +101,5 @@ const sumNumbers = number => {
   return sum;
 };
 ```
+## Data Type Built in Prototypes
+## DOM Manipulation
