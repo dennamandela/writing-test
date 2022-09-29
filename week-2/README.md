@@ -91,7 +91,8 @@ const penambahan = (a, b) => {
 ```
 ### Short Syntax Function
 - **Single-Line Block**
-```const sumNumbers = number => number + number;
+```
+const sumNumbers = number => number + number;
 ```
 - **Multi-Line Block**
 ```
