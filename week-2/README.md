@@ -55,3 +55,38 @@ function penambahan(a, b) {
 }
 console.log(penambahan(5, 5)) // Output: 10
 ```
+- **Default Parameters** digunakan untuk memberikan nilai awal/default pada parameter function.
+- Contoh kode default parameters
+```
+function greetOnWebsite(name = 'Stranger') {
+  return 'Hello ' + name;
+}
+console.log(greetOnWebsite('David')); // Output: 'Hello David'
+console.log(greetOnWebsite()); // Output: 'Hello Stranger'
+```
+- **Function Helper** bisa menggunakan function yang sudah dibuat pada function lain.
+- Contoh kode function helpers
+```
+function multiplyByNineFifths(number) {
+  return number * (9/5);
+};
+
+function getFahrenheit(celsius) {
+  return multiplyByNineFifths(celsius) + 32;
+};
+
+getFahrenheit(15); // Returns 59
+```
+### Arrow Function
+- **Arrow Function** adalah cara lain menuliskan function. Ini adalah fitur terbaru yang ada pada ES6 (Javascript Version)
+- Contoh kode arrow function
+```
+const greeting = () => {
+  return 'Hello World';
+};
+
+const penambahan = (a, b) => {
+  return a + b;
+};
+```
+
