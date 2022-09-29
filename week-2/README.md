@@ -89,4 +89,14 @@ const penambahan = (a, b) => {
   return a + b;
 };
 ```
-
+### Short Syntax Function
+- **Single-Line Block**
+```const sumNumbers = number => number + number;
+```
+- **Multi-Line Block**
+```
+const sumNumbers = number => {
+  const sum = number + number;
+  return sum;
+};
+```
