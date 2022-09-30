@@ -161,7 +161,7 @@ const sumNumbers = number => {
     `` <button id="alert-button">show</button> ``
     Memanggil element berdasarkan id
     `` const input = document.getElementById("user-input") ``
-    `` const button = dosument.getElementById("alert-button") ``
+    `` const button = document.getElementById("alert-button") ``
 
     ```
      button.addEventListener("click", function()) {
