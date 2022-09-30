@@ -106,12 +106,12 @@ const sumNumbers = number => {
 - DOM bukan bagian dari JavaScript, melainkan browser (Web API). Fungsinya untuk memanipulasi tampilan web agar website lebih dinamis dan interaktif.
 - Cara memanggil DOM Value yaitu :
   - Memanggil tag HTML berdasarkan ID
-  `` console.log(document.getElementByID("header))``
+  ```document.getElementByID("header")```
   - Memanggil tag HTML berdasarkan Class Name 
-  `` console.log(document.getElementByClassName("text-color-blue"))``
+  ```document.getElementByClassName("container")```
   - Memanggil tag html berdasarkan query selector
-  `` console.log(document.querySelector("#header "))`` 
-  `` console.log(document.querySelector(".text-color-blue"))``
+  ```document.querySelector("#header")``` 
+  ```document.querySelector(".text-color-blue")```
   - Memanipulasi content
   Cara memanipulasi content :
     - Deklarasi varible header sebagai wadah untuk menyimpan tag HTML
