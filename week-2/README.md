@@ -103,3 +103,96 @@ const sumNumbers = number => {
 ```
 ## Data Type Built in Prototypes
 ## DOM Manipulation
+- DOM bukan bagian dari JavaScript, melainkan browser (Web API). Fungsinya untuk memanipulasi tampilan web agar website lebih dinamis dan interaktif.
+- Cara memanggil DOM Value yaitu :
+  - Memanggil tag HTML berdasarkan ID
+  `` console.log(document.getElementByID("header))``
+  - Memanggil tag HTML berdasarkan Class Name 
+  `` console.log(document.getElementByClassName("text-color-blue"))``
+  - Memanggil tag html berdasarkan query selector
+  `` console.log(document.querySelector("#header "))`` 
+  `` console.log(document.querySelector(".text-color-blue"))``
+  - Memanipulasi content
+  Cara memanipulasi content :
+    - Deklarasi varible header sebagai wadah untuk menyimpan tag HTML
+  `` let header = document.getElementById("header"); ``
+    - Memanipulasi Content pada Header Content dari pemilik element dengan ID Header dengan text.Content
+  `` document.getElementById("header").textContent = "Teks Heading" `` <br />
+     Memanipulasi Content didalam sebuah element dengan .innerHTML
+  ```
+  <ul id= "list"></ul>
+
+  document.getElementById("list").innerHTML = "<li> item1 </li> <li> item2 </li>"
+  ```
+- Membuat Element HTML
+- Contoh :
+  ```
+  <div id ="header"></div>
+
+  //untuk membuat sebuah elemnt heading
+  const heading = dosument.createElement("h1)
+  heading.textContent = "Ini Heading"
+
+  document.getElemntByID("header").appendChild(heading)
+  ```
+
+- **DOM Events** merupakan object model yang bertugas untuk membantu interaksi user dengan document HTML
+- Contoh HTML DOM events
+  - Click
+  - Scroll
+  - Change
+  - Focus
+  - Hover
+  - Submit
+  - Blur
+- Menangkap Interaksi User
+  - Element.addEventListener("event)
+  - Element.onevent
+- EventListener <br />
+  Dengan menggunakan Element.addEventListener("event") dapat menerapkan beberapa hal yaitu :
+  - Bisa dihilangkan
+  - Bisa ada beberapa event listener yang sama untuk 1 element
+  - Memiliki argument tambahan {options}
+- Contoh EventListener :
+  - EventListener - Click 
+    `` <input id="user-input"/> ``
+    `` <button id="alert-button">show</button> ``
+    Memanggil element berdasarkan id
+    `` const input = document.getElementById("user-input") ``
+    `` const button = dosument.getElementById("alert-button") ``
+
+    ```
+     button.addEventListener("click", function()) {
+      alert(input.value)
+    } 
+    ```
+- EventListener - Blur : event dimana sebuah element kehilangan fokus dari user 
+- Contoh EventListener - Blur <br />
+  Misalkan saat ingin memvalidasi isi dari ``<input id = "username" />`` agar panjangnya minimal 6 karakter
+
+  `` const input = document.getElementById("username") ``
+
+  ```
+  input.addEventListener("blur", () => {
+    if(input.value.length < 6) alert("Panjang username minimal 6")
+  })
+  ```
+- EventListener - Form Submission
+- Contoh EvenListener - Form Submission <br />
+  Misalkan terdapat beberapa input dalam sebuah form `` <input name="email"/> `` dan ``<input type="password" name="password"/>`` <br />
+  Untuk mendapatkan isi dari kedua inputan tersebut terdapat 2 cara :
+  - Memasang event listener di kedua input dan tombol submit, lalu saat tombol diklik, baca value dari kedua input tersebut
+  - Memasang event listener di form, lalu gunakan FormData untuk menggambil data dari masing-masing input
+  ``` 
+    const form = document.getElementById("form")
+
+    form.addEventListener("submit", function(event)){
+    event.preventDefault()
+
+    const formData = new FormData(form)
+    const values = Object.fromEntries(formData) {
+      email: ....
+    }
+  })
+  ```
+
