@@ -113,8 +113,10 @@ const sumNumbers = number => {
   ```document.querySelector("#header")``` 
   ```document.querySelector(".text-color-blue")```
   - Memanipulasi content
+  
   Cara memanipulasi content :
-    - Deklarasi varible header sebagai wadah untuk menyimpan tag HTML
+  
+    - Deklarasi variable header sebagai wadah untuk menyimpan tag HTML
   `` let header = document.getElementById("header"); ``
     - Memanipulasi Content pada Header Content dari pemilik element dengan ID Header dengan text.Content
   `` document.getElementById("header").textContent = "Teks Heading" `` <br />
