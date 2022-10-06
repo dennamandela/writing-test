@@ -196,9 +196,9 @@ inventory.forEach((baris) => {
 ```
 ### Object
 - **Object** adalah sebuah tipe data pada variabel yang menyimpan properti dan fungsi (method).
-  - **Properi** adalah data lengkap dari sebuah object.
+  - **Properti** adalah data lengkap dari sebuah object.
   - **Method** adalah action dari sebuah object. Apa saja yang dapat dilakukan dari suatu object.
-- Membuat sebuah object Sama seperti tipe data sebelumnya. Object dapat diassign kedalam sebuah variabel.
+- Membuat sebuah object sama seperti tipe data sebelumnya. Object dapat diassign kedalam sebuah variabel.
 - Contoh object person dengan properti
 ```
 let person = {
@@ -335,6 +335,7 @@ console.log(number.originA);
 console.log(number.originB);
 ```
 - **Looping Object**
+```
 const news = {
   title: 'Impact Byte menjadi Unicorn',
   description: 'Lorem ipsum dolor sit amet.',
@@ -375,20 +376,173 @@ students.forEach((listStudents) => {
   console.log(listStudents);
 });
 ```
+### Recursive
+- **Recursive** adalah function yang memanggil dirinya sendiri sampai kondisi tertentu.
+- Recursive kebanyakan digunakan untuk case matematika, fisika, kimia, dan yang berhubungan dengan calculation.
+- Struktur recursive
+```
+function recursive() {
+  // ...
+  recursive();
+  // ...
+}
+```
+- Recursive akan berhenti memanggil dirinya sendiri jika kondisi terpenuhi
+```
+function recursive() {
+  if(condition) {
+    // stop calling itself
+    // ...
+  } else {
+    recursive();
+  }
+}
+```
+- Paradigma Baru:
+  - procedural
+  - conditional
+  - looping
+  - modular (function)
+  - recursive
+- Ciri dari rekursif:
+  - Fungsi rekursif selalu memiliki kondisi yang menyatakan kapan fungsi tersebut berhenti.
+  - Fungsi rekursif selalu memanggil dirinya sendiri sambil mengurangi atau memecahkan data masukan setiap panggilannya.
+- Contoh kasus rekursif 
+- Fungsi rekursif menghitung mundur number
+```
+function countDown(fromNumber) {
+  console.log(fromNumber);
 
+  let nextNumber - fromNumber - 1;
 
+  //jika kondisi ini bernilai false maka recursive berhenti
+  if (nextNumber > 0) {
+    countDown(nextNumber);
+  }
+}
 
+countDown(3);
+```
+### Asynchronous
+- **Asynchronous** mengizinkan komputer memproses task yang lain sambil menunggu proses yang masih berlangsung.
+- Beberapa cara untuk membuat asynchronous:
+  - Callback
+  - Promises
+  - Async/Await
+- **Callback** function adalah function yang kita letakan di dalam argumen/parameter pada function, dan function tersebut akan dieksekusi setelah function pertama menyelesaikan tugasnya.
+- Contoh Callback
+```
+const mainFunc = (number1,number2,callBack) => {
+  console.log(number1 + number2)
+  callBack()
+}
 
+const myCallback = () => {
+  console.log ('Done !')
+}
 
+main(1,2,myCallback) // output 3 Done!
+```
+- Proses asynchronous identik dengan delay, dimana hasil dari proses tersebut membutuhkan selang waktu tertentu untuk menghasilkan output.
+- Pada asynchronous kita menggunakan setTimeOut untuk simulasinya. Proses function pada p2 kita lewati sambil menunggu selesai, program lanjut ke function p3
+```
+const p1 = () => {
+  console.log('p1 telah selesai dijalankan');
+};
 
+const p2 = () => {
+  setTimeout(() => {
+    console.log('p2 selesai dijalankan')
+  }, 3000)
+};
 
+const p3 = () => {
+  p1()
+  p2()
+  console.log('p3 selesai dijalankan');
+};
 
+p3();
+```
+- setTimeout digunakan untuk simulasi asynchronous. Karena sebenarnya kita tidak bisa membuat proses asynchronous murni.
+- **Promises** adalah salah satu fitur baru di ES6, biasa digunakan untuk melakukan http request/fetch data dari API.
+- Dalam pengambilan data, promise memiliki 3 kemungkinan state yaitu:
+  - Pending(sedang dalam proses)
+  - Fulfilled (berhasil)
+  - Rejected (gagal)
+```
+const contohPromise = () => {
+  new Promise((resolve, rejected) => {
+    let condition = true;
+    if (condition) {
+      resolve('request fulfilled)
+    } else {
+      reject(new Error('terjadi kesalahan, rejected'))
+    }
+  }).then(result => console.log(result))
+    .catch(error => console.log(error))
+}
+contohPromise()
+```
+- **Async-Await** adalah salah satu fitur baru dari javascript yang digunakan untuk menangani hasil dari sebuah Promise.
+- Sedangkan await berfungsi untuk menunda sebuah kode dijalankan sampai proses asynchronous berhasil.
+- Cara penulisan Async/Await menggunakan es6 dan tidak menggunakan es6.
+```
+async function hello() {
+  let result = await 'Hellooo'
+  return result
+}
+// es6
+const hello1 = async () => {
+  let result = await 'Helloo'
+  result result
+}
+```
+- HTTP Request fetch()
+- **Fetch** adalah native web API untuk melakukan HTTP calls dari external network.
+- fetch() memiliki parameter utama yaitu URL/endpoint API, dan parameter kedua yaitu options, options ini berisi method, headers dan body.
+```
+const URL = "https://5e92be81bbff810016969173.mockapi.io/api/v1/users"
+const options = {
+  method: "GET" / "POST",
+  headers: {
+    "Content-type": "application/json"
+  },
+  body: user
+}
 
+fetch(URL, options)
+```
+- Contoh function untuk mengambil data dari API menggunakan fetch(), Promise based.
+```
+const getDataAPI = () => {
+  //deklarasi API endpoint
+  const URL = "https://5e92be81bbff810016969173.mockapi.io/api/v1/users";
+  // buat option method untuk fetch()
+  const options = {
+    method: "GET"
+  }
+  // jalankan fetch dengan api dan option yang kita buat
+  fetch(API, option)
+  // response pertama, kita ambil data json
+  .then(response => response.json())
+  .then(result => console.log(result))
+  //jika terjadi kesalahan kita tangkap errornya
+  .catch(error => console.log(error, "ERROR))
+}
+```
+- Contoh function untuk mengambil data dari API menggunakan fetch(), Dengan Async Await..
+```
+const getDataAPIwithAsync = async () => {
+  const API = "https://5e92be81bbff810016969173.mockapi.io/api/v1/users";
+  const option = {
+    method = "GET";
+  }
 
+  let response = await fetch(API, option)
+  response = await response.json()
+  console.log(response);
+}
 
-
-
-
-
-
-
+getDataAPIwithAsync()
+```
