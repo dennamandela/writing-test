@@ -152,6 +152,7 @@ let inventory = [
 console.log(inventory[1][0]);
 ```
 - Multidimensional array dapat menggunakan Property dan Method built-in Array.
+```
 let inventory = [
   ['Kaos Polos', 10],
   ['Jaket Hoodie', 12],
@@ -193,6 +194,197 @@ inventory.forEach((baris) => {
   });
 });
 ```
+### Object
+- **Object** adalah sebuah tipe data pada variabel yang menyimpan properti dan fungsi (method).
+  - **Properi** adalah data lengkap dari sebuah object.
+  - **Method** adalah action dari sebuah object. Apa saja yang dapat dilakukan dari suatu object.
+- Membuat sebuah object Sama seperti tipe data sebelumnya. Object dapat diassign kedalam sebuah variabel.
+- Contoh object person dengan properti
+```
+let person = {
+  name: 'Denna Mandela',
+  age: 21,
+  isVerified: true,
+};
+```
+- Mengakses Object dan Property Object
+```
+let person = {
+  name: 'Denna Mandela',
+  age: 21,
+  isVerified: true,
+};
+
+console.log(person.name);
+```
+- Gunakan single quote pada key jika menggunakan spasi seperti 'current address'
+```
+let person = {
+  name: 'Denna Mandela',
+  age: 21,
+  'current address': 'Bandung, Indonesia',
+};
+
+console.log(person);
+```
+- Bracket Notation
+- Kita juga bisa menggunakan bracket notation saat memanggil properti dari sebuah object.
+```
+let person = {
+  name: 'Denna Mandela',
+  age: 21,
+  'current address': 'Bandung, Indonesia',
+};
+
+console.log(person['name']);
+console.log(person['current address']);
+```
+- Update Object
+  - Object dapat mengupdate value dari key yang sudah tersedia
+  - Object dapat menambahkan key dan value baru
+- Contoh update data pada object
+```
+let person = {
+  name: 'Denna Mandela',
+  age: 21,
+  'current address': 'Bandung, Indonesia',
+};
+
+// update current key key with the new value
+person.age = 22;
+
+// Add new key and value
+person.telepon = 089646615043;
+
+console.log(person);
+```
+- Update data object harus menggunakan let pada deklarasi variabel
+```
+let person = {
+  name: 'Denna Mandela',
+  age: 21,
+  'current address': 'Bandung, Indonesia',
+};
+
+person = {
+  fullname: 'Denna Mandela Putra'
+}
+
+console.log(person);
+```
+- Delete Object Property
+- Kita dapat menghapus properti dari object menggunakan delete operator.
+- Contoh delete property object age dari data people
+```
+let people = {
+  name: 'Denna',
+  age: 21,
+  isVerified: true,
+}
+
+delete people.age;
+console.log(people);
+```
+- **Method**: Jika value yang kita masukkan pada property berupa function. Maka itu disebut method.
+- **log()** adalah property yang berupa function dari object console.
+- Ada 2 method pada object greeting.
+```
+const greeting = {
+  welcome: function() {
+    return 'Halo selamat datang';
+  },
+  afterTransaction: function() {
+    return 'Terima kasih sudah membeli produk kami';
+  },
+};
+
+console.log(greeting.welcome());
+```
+- **Nested Object**: Pada real application nanti kalian pasti menemukan data object yang kompleks. Object yang berasal dari turunan object lainnya. 
+- Contoh Nested Object Data article pada sebuah aplikasi berita
+```
+const news = {
+  title: 'Impact Byte menjadi Unicorn',
+  description: 'Lorem ipsum dolor sit amet.',
+  author: {
+    people: {
+      name: 'Denna Mandela',
+      age: 21,
+      city: 'Bandung',
+    }
+  }
+};
+
+console.log('News:', news.title);
+console.log('Article published by', news.author.people.name);
+```
+- **Pass by reference**: Kita bisa mengubah data yang ada pada object melalui sebuah function dan memasukkan object sebagai parameter function.
+```
+let number = {
+  originA: 2,
+  originB: 3,
+};
+
+function changeData (obj) {
+  obj.originA = 4;
+  obj.originB = 6;
+}; 
+
+changeData(number)
+console.log(number.originA);
+console.log(number.originB);
+```
+- **Looping Object**
+const news = {
+  title: 'Impact Byte menjadi Unicorn',
+  description: 'Lorem ipsum dolor sit amet.',
+  author: {
+    people: {
+      name: 'Denna Mandela',
+      age: 21,
+      city: 'Bandung',
+    }
+  }
+};
+
+for(let data in news) {
+  console.log(news[data]);
+};
+
+for(let author in news.author.people) {
+  console.log(news.author.people[author]);
+}
+```
+- **Array Object**: Object sama seperti Array yang bisa menyimpan banyak data. Kita dapat menggunakan array of object untuk data yang lebih dari satu. 
+- Looping pada Data array of object students
+```
+let students = [
+  {
+    name: 'Denna Mandela',
+    age: 21,
+    isVerified: true,
+  },
+  {
+    name: 'Feby Setia Cipta',
+    age: 21,
+    isVerified: true,
+  },
+];
+
+students.forEach((listStudents) => {
+  console.log(listStudents);
+});
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
