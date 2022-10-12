@@ -546,3 +546,76 @@ const getDataAPIwithAsync = async () => {
 
 getDataAPIwithAsync()
 ```
+### Web Storage
+- Dengan penyimpanan web, aplikasi web dapat menyimpan data secara lokal di dalam browser pengguna.
+- **Web Storage** adalah per asal (per domain dan protokol). Semua halaman, dari satu asal, dapat menyimpan dan mengakses data yang sama.
+- HTML Web Storage Objects
+- HTML Web Storage menyediakan dua objek untuk menyimpan data pada klien yaitu:
+  - ```window.localStorage``` untuk menyimpan data tanpa tanggal kedaluwarsa
+  - ```window.sessionStorage``` untuk menyimpan data untuk satu sesi (data hilang saat tab browser ditutup)
+- Sebelum menggunakan web storage, periksa dukungan browser untuk localStorage dan sessionStorage:
+```
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+```
+- **localStorage Object** menyimpan data tanpa tanggal kedaluwarsa. Data tidak akan dihapus saat browser ditutup, dan akan tersedia pada hari, minggu, atau tahun berikutnya.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+</html>
+```
+- Syntax untuk menghapus item localStorage "lastname" adalah sebagai berikut:
+```
+localStorage.removeItem("lastname");
+```
+- **sessionStorage Object** sama dengan objek localStorage, kecuali objek tersebut menyimpan data hanya untuk satu sesi. Data dihapus ketika pengguna menutup tab browser tertentu.
+- Contoh berikut menghitung berapa kali pengguna mengklik tombol, di sesi saat ini:
+```
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+<body>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+</body>
+</html>
+```
