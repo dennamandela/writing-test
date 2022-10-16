@@ -1,5 +1,4 @@
 # Fourth Week Writing Test
-<<<<<<< HEAD
 ## Responsive Web Design
 ### Apa itu Responsive web design?
 - Responsive Web Design (RWD) adalah bertujuan membuat desain website kita dapat diakses dalam device apapun.
