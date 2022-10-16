@@ -46,6 +46,71 @@
   /* your tag element html and your css*/
 }
 ```
+- Ada 2 cara/pattern dalam menggunakan media query
+- Cara ke-1: Membuat file css berbeda untuk masing-masing device
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <link rel="stylesheet" media="screen and (max-width: 500px)" href="styles/main.mobile.css">
+</head>
+<body>
+  <h2>Responsive Web Design (RWD)</h2>
+</body>
+</html>
+```
+- Cara ke-2: kita menggabungkan 1 file CSS untuk setting styling berbagai device
+```
+body {
+  background-color: white;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+```
+### Breakpoint
+- Perubahan yang terjadi pada tampilan saat berganti device atau ukuran width disebut breakpoint.
+- **Complex Breakpoint Media Query**
+- Menggunakan range media query min and max
+```
+body {
+  background-color: white;
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+```
+- **Important Notes**
+- Tidak ada aturan baku besaran width dan berapa banyak breakpoint yang harus dilakukan.
+- Responsive web design dilakukan sesuai kebutuhan konten kita. jika konten yang ditampilkan sudah tidak bisa diakses atau sulit dilihat pada width tertentu. sudah saatnya menggunakan **media query**.
+## Bootstrap
+### Apa itu Bootstrap?
+- Bootstrap adalah framework web development berbasis HTML, CSS, dan JavaScript yang dirancang untuk mempercepat proses pengembangan web responsive dan mobile-first (memprioritaskan perangkat seluler).
+### Mengapa menggunakan Bootstrap
+- Tujuan dan fungsi Bootstrap adalah untuk membuat website responsive dan mobile-first. Jadi, semua elemen antarmuka website dipastikan bisa bekerja secara optimal di semua ukuran layar, baik desktop maupun perangkat seluler.
+### Kapan kita menggunakan bootstrap?
+- Boostrap digunakan ketika membuat website sederhana dan tidak memerlukan load lama
+### Layout pada Bootstrap
+- **Breakpoint** adalah ukuran lebar yang menentukan tampilan responsif terhadap ukuran viewport perangkat tertentu.
+- Dalam bootstrap terdapat beberapa breakpoint, yaitu:
+  - sm
+  - md
+  - lg
+  - xl
+  - xxl
+  
 =======
 ## Git & GitHub Intermediate
 - Git adalah
