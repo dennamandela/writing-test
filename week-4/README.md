@@ -1,4 +1,5 @@
 # Fourth Week Writing Test
+<<<<<<< HEAD
 ## Responsive Web Design
 ### Apa itu Responsive web design?
 - Responsive Web Design (RWD) adalah bertujuan membuat desain website kita dapat diakses dalam device apapun.
@@ -45,3 +46,8 @@
   /* your tag element html and your css*/
 }
 ```
+=======
+## Git & GitHub Intermediate
+- Git adalah
+- https://www.canva.com/design/DAFPHS5H2b4/W-Jg1VIYmKiIDB4f5PXgjA/edit?utm_content=DAFPHS5H2b4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+>>>>>>> cb29e2c1d10b63778ac3a308794476004e648740
