@@ -109,9 +109,83 @@ body {
   - lg
   - xl
   - xxl
-  
-=======
-## Git & GitHub Intermediate
-- Git adalah
-- https://www.canva.com/design/DAFPHS5H2b4/W-Jg1VIYmKiIDB4f5PXgjA/edit?utm_content=DAFPHS5H2b4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
->>>>>>> cb29e2c1d10b63778ac3a308794476004e648740
+- **Container** adalah elemen paling dasar dalam layout bootstrap. 
+- Terdapat 3 macam container dalam bootstrap, yaitu:
+  - Default Container: Class container memiliki sifat yang responsive dan fixed-width, yang berarti lebarnya akan berubah pada setiap breakpoint.
+  ```
+  <div class="container">
+    <!-- Content here -->
+  </div>
+  ```
+  - Fluid Container: Class container-fluid memiliki lebar yang sama dengan viewport
+  ```
+  <div class="container-fluid">
+
+    <!-- Content here -->
+  </div>
+  ```
+  - Responsive Container: Responsive container, diurutkan dari breakpoint terkecil, terdiri dari:
+    - .container-sm
+    - .container-md
+    - .container-lg
+    - .container-xl
+    - .container-xxl
+  ```
+  <div class="container-sm">100% wide until small breakpoint</div>
+  <div class="container-md">100% wide until medium breakpoint</div>
+  <div class="container-lg">100% wide until large breakpoint</div>
+  <div class="container-xl">100% wide until extra large breakpoint</div>
+  <div class="container-xxl">100% wide until extra extra large breakpoint</div>
+  ```
+- **Grid** biasanya digunakan bersama dengan container. 
+- Contoh kodenya sebagai berikut:
+```
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+```
+  - Class **row** berfungsi untuk mengubah sifat dari div di dalamnya yang semula akan ditampilkan secara block, akan dapat ditampilkan secara inline.
+  - Class **col** berfungsi untuk mengubah div tersebut menjadi responsif terhadap lebar viewport.
+- **Gutters** berfungsi untuk memberikan jarak antar item di dalamnya.
+- Contohnya sebagai berikut:
+```
+<div class="container">
+  <div class="row g-2">
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+```
+### Component pada Bootstrap
+- Ada banyak komponen yang disediakan oleh Bootstrap 5, seperti:
+  - Breadcrumb
+  - Card
+  - Navbar
+  - Modal
+  - Collapse
+  - Alerts
+  - Pagination
+  - Buttons
+  - Carousel
+  - Dropdowns
+  - Badge
