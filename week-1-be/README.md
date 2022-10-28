@@ -18,23 +18,24 @@
   - Browser latest version (Chrome, mozilla, opera, dll).
   - Command Line Interface (mac / linux : terminal, windows : cmd)
   - Node JS
-- Apa itu Node JS?
+### Apa itu Node JS?
 - Node.js adalah runtime development untuk JavaScript yang bersifat open-source dan cross-platform. Node.js menjalankan V8 JavaScript engine (yang juga merupakan inti dari Google Chrome) diluar browser.
-- Node JS Architecture
-  - **Single Thread**, Javascript menggunakan konsep single thread, yang berarti hanya memiliki satu tumpukan panggilan yang digunakan untuk menjalankan program.
-  - **Event Loop** akan memfasilitasi kondisi ini, event loop akan memeriksa terus menerus, ketika antrian kosong di call stack maka akan menambah antrian baru dari event queue sampai semua perintah selesai di eksekusi.
-  - **Server side scripting**, dengan menggunakan NodeJS dapat menjalankan javascript di server side menggunakan terminal command line menggunakan perintah “node”.
-- JavaScript For Node JS
+### Node JS Architecture
+- **Single Thread**, Javascript menggunakan konsep single thread, yang berarti hanya memiliki satu tumpukan panggilan yang digunakan untuk menjalankan program.
+- **Event Loop** akan memfasilitasi kondisi ini, event loop akan memeriksa terus menerus, ketika antrian kosong di call stack maka akan menambah antrian baru dari event queue sampai semua perintah selesai di eksekusi.
+- **Server side scripting**, dengan menggunakan NodeJS dapat menjalankan javascript di server side menggunakan terminal command line menggunakan perintah “node”.
+### JavaScript For Node JS
 - Sebelum masuk lebih dalam ke Node JS, terdapat beberapa materi yang perlu direview dan di pahami lagi dari bahasa pemorgraman javascript agar mempermudah memahami Node JS yaitu :
   - Arrow function expression
   - Asynchronous
   - JSON
+### Instalasi Node JS
 - Install Node JS
 - link : https://nodejs.org/en/
 - Untuk mengetes apakah berhasil terinstall, dapat menjalankan “node -v” untuk mengecek versi NodeJS yang terinstal.
 - Running Node JS
 - Kita dapat menggunakan node di terminal kita dengan mengetik “node” kemudian bisa membuat code javascript dan langsung dieksekusi.
-- Node JS for Back end Development
+### Node JS for Back end Development
 - Build In Module Node JS
 - **Console** merupakan module bawaan dari javascript yang ada di node JS untuk digunakan sebagai debug atau menampilkan code secara interface.
 ```
@@ -110,7 +111,7 @@ const res = await setTimeout(100, 'result');
 
 console.log(res);
 ```
-- Membuat Web Server Dengan Node JS
+### Membuat Web Server Dengan Node JS
 - **Node JS Web Server**
 - Node.js memiliki built-in modul yang disebut HTTP, built-in modul ini memungkinkan Node JS mentransfer data melalui Hyper Text Transfer Protocol (HTTP).
   - Untuk menggunakan modul HTTP, gunakan require()
