@@ -156,6 +156,7 @@ body {
 ```
   - Class **row** berfungsi untuk mengubah sifat dari div di dalamnya yang semula akan ditampilkan secara block, akan dapat ditampilkan secara inline.
   - Class **col** berfungsi untuk mengubah div tersebut menjadi responsif terhadap lebar viewport.
+  
 - **Gutters** berfungsi untuk memberikan jarak antar item di dalamnya.
 - Contohnya sebagai berikut:
 ```
