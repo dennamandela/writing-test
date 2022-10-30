@@ -172,4 +172,132 @@ http.createServer(function (req, res) {
     res.end(txt);
 }).listen(8080);
 ```
+## Express JS
+### Apa itu Express JS ?
+- Express.js, atau hanya express, adalah kerangka aplikasi web back end untuk Node.js, dirilis sebagai perangkat lunak sumber terbuka dan gratis di bawah lisensi MIT. Ini dirancang untuk membangun aplikasi web dan API. Ini telah disebut sebagai kerangka kerja server standar de facto untuk Node.js.
+### Apa itu Back End Web Application?
+- Back end app adalah aplikasi yang berjalan di server-side yang bekerja untuk memberikan informasi berupa data sesuai request dari client / browser / front end app.
+- Kelebihan dari framework ini terletak pada fitur caching, support dengan Google V8 Engine, JavaScript, serta didukung oleh komunitas dan skalabilitas aplikasi yang baik.
+### Apa itu REST API?
+- **RESTful API / REST API** merupakan penerapan dari **API (Application Programming Interface)**.
+- Sedangkan **REST (Representional State Transfer)** adalah sebuah arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dimana metode ini sering diterapkan dalam pengembangan aplikasi.
+- RESTFUL API memiliki 4 komponen penting yaitu:
+  - URL Design
+  - HTTP Verbs
+  - HTTP Response Code
+  - Format Response
+### Installation and Preparation
+- **Install express JS**
+- Karena expressJS adalah sebuat modules atau package yang dikembangkan menggunakan bahasa javascript, maka kita bisa menggunakan NPM untuk menginstall express JS
+```
+npm install express --save
+```
+- **Preparation**
+- Terdapat beberapa module yang perlu diinstal untuk mempermudah develop server side application, seperti nodemon (agar dapat restart application otomatis selama proses development)
+```
+npm install --save-dev nodemon
+```
+- **Basic Syntax expressJS**
+```
+const express = require('express');
+const app = express();
+const port = 3000
 
+app.get('/', (req res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log('Example app listening at http://localhost:${port}')
+})
+```
+### Basic Routes
+- **Routes** adalah sebuah end point yang diapat kita akses menggunakan URL di website. Didalam routes kita perlu menentukan method API, alamat dan response apa saja yang akan dikeluarkan
+```
+app.get('/', (req res) => {
+  res.send('Hello World!');
+}) 
+```
+- Kita bisa menjalankan aplikasi sederhana kita dengan cara menggunakan “node”. Dan aplikasi kita akan berjalan di alamat ‘http://localhost:3000’
+- Kemudian kita dapat mengaksesnya di website dan menambah route yang akan kita akses yaitu “/”
+```
+node app.js
+```
+- **method**, Kita dapat menggunakan method yang dalam REST API seperti **POST, PUT, PATCH** dan **DELETE**
+```
+app.post('/add', (req res) => {
+  res.send('Data berhasil ditambahkan')
+})
+
+app.delete('/delete', (req res) => {
+  res.send('Data berhasil dihapus')
+})
+```
+- **Response** Di dalam route kita dapat mengirim response menggunakan parameter dari route express.js yaitu “res.Send()” untuk mengirim plain text ketika kita mengakses route tersebut.
+```
+app.get('/hello', (req res) => {
+  res.json({
+    name : "Mandela",
+    umur : 21,
+    alamat : "bandung",
+  })
+})
+```
+- Kita dapat mengirim response berupa output json yang biasa dipakai untuk back end application. Dengan menggunakan output json maka kita dapat mengirim data yang mudah diakses.
+- **Status Code**
+- Dalam pengaplikasian back end application, kita sangat perlu memberikan status code sebagai informasi apakah route yang kita akses berjalan sebagaimana mestinya dan tidak terjadi error.
+```
+app.get('/hello', (req res) => {
+  res.status(200).json({
+    name : "Mandela",
+    umur : 21,
+    alamat : "bandung",
+  })
+})
+```
+- **Query** merupakan parameter yang digunakan untuk membantu menentukan tindakan yang lebih spesifik daripada hanya sekedar router biasa. Biasanya query ditaruh di akhir route dengan memberikan informasi diawali dengan “?” kemudian tedapat key dan data yang dapat ditindak lanjuti. Ex : “?q=hello&age=23”
+```
+app.get('/hello', (req res) => {
+
+  let name = req.query.name
+  let umur = req.query.umur
+
+  res.status(200).json({
+    name : "Mandela",
+    umur : 21,
+    alamat : "bandung",
+  })
+})
+```
+- **Nested route** digunakan ketika terdapat banyak route yang memiliki nama yang sama atau ingin membuat route yang lebih mendalam.
+```
+app.use("/hello", hello)
+
+const hello = require('express').Router();
+
+hello.get('/denna', (req, res) => {
+  res.send("hello saya adalah denna")
+})
+
+hello.get('/abil', (req, res) => {
+  res.send("hello saya adalah abil")
+})
+
+hello.get('/rodhi', (req, res) => {
+  res.send("hello saya adalah rodhi")
+})
+```
+### Express Middleware
+- **Apa itu Middleware ?**
+- **Middleware function** adalah sebuah fungsi yang memiliki akses ke **object request (req)**, **object response (res)**, dan sebuah **fungsi next** didalam request-response cycle.
+- Fungsi next biasanya di berikan nama variable next.
+- Apa Saja yang Bisa dilakukan oleh Function Middleware?
+- Pada Dasarnya, sebuah middleware function dapat melakukan tugas-tugas berikut:
+  - Menjalankan kode apapun.
+  - Memodifikasi Object Request dan Object Response.
+  - Menghentikan request-response cycle.
+  - Melanjutkan ke middleware function selanjutnya atau ke handler function dalam suatu request response cycle.
+- Kemampuan Fungsi Middleware : Menjalankan Kode Apapun
+  - Sebuah function middleware bisa digunakan untuk mengeksekusi kode apapun untuk suatu tujuan tertentu.
+  - Sebagai contoh, kita akan membuat sebuah middleware function yang akan mencetak tulisan “Halo Skilvul, request diterima!” Ketika sebuah HTTP Request masuk kedalam middleware function ini. 
+  - Middleware Function ini akan diberi nama dengan skilvulLogger.
