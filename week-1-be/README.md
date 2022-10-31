@@ -10,8 +10,50 @@
 - **Static Web Server** atau tumpukan, terdiri dari komputer (perangkat keras) dengan server HTTP (perangkat lunak). Kami menyebutnya "statis" karena server mengirimkan file yang dihosting apa adanya ke browser.
 - **Dynamic Web Server**, Sebuah server web dinamis terdiri dari server web statis ditambah perangkat lunak tambahan, paling sering server aplikasi dan database. Kami menyebutnya "dinamis" karena server aplikasi memperbarui file yang dihosting sebelum mengirim konten ke browser melalui server HTTP.
 ### Server Side Programming
-- Web Server 
-
+- Web Server menunggu pesan permintaan klien, memprosesnya saat tiba, dan membalas browser web dengan pesan respons HTTP. Respons berisi baris status yang menunjukkan apakah permintaan berhasil atau tidak (mis. "HTTP/1.1 200 OK" untuk berhasil).
+  - **Static Sites**: situs yang mengembalikan konten hard-coded yang sama dari server setiap kali sumber daya tertentu diminta). Saat pengguna ingin menavigasi ke halaman, browser mengirimkan permintaan "GET" HTTP yang menentukan URL-nya.
+  - **Dynamic Site**: situs di mana beberapa konten respons dihasilkan secara dinamis, hanya bila diperlukan. Di situs web dinamis, halaman HTML biasanya dibuat dengan memasukkan data dari database ke dalam placeholder di template HTML (ini adalah cara yang jauh lebih efisien untuk menyimpan konten dalam jumlah besar daripada menggunakan situs web statis).
+### what is REST
+- REST, atau Representational State Transfer, adalah gaya arsitektur untuk menyediakan standar antara sistem komputer di web, sehingga memudahkan sistem untuk berkomunikasi satu sama lain.
+- Dalam gaya arsitektur REST, implementasi klien dan implementasi server dapat dilakukan secara independen tanpa saling mengetahui satu sama lain.
+### Komunikasi antara Klien dan Server 
+- **Making Requests**
+- REST mengharuskan klien membuat permintaan ke server untuk mengambil atau mengubah data di server. Permintaan umumnya terdiri dari:
+  - kata kerja HTTP, yang mendefinisikan jenis operasi apa yang harus dilakukan
+  - header, yang memungkinkan klien untuk menyampaikan informasi tentang request
+  - jalan menuju resource
+  - message body opsional yang berisi data
+- **HTTP VERBS**
+- Ada 4 kata kerja HTTP dasar yang kami gunakan dalam permintaan untuk berinteraksi dengan sumber daya dalam sistem REST:
+  - GET — mengambil sumber daya tertentu (berdasarkan id) atau kumpulan sumber daya
+  - POST — buat sumber daya baru
+  - PUT — perbarui sumber daya tertentu (berdasarkan id)
+  - DELETE — menghapus sumber daya tertentu dengan id
+### Headers and Accept Parameters
+- Di header permintaan, klien mengirimkan jenis konten yang dapat diterimanya dari server.
+- Tipe lain dan subtipe yang umum digunakan:
+  - gambar — gambar/png, gambar/jpeg, gambar/gif
+  - audio — audio/wav, audio/mpeg
+  - video — video/mp4, video/ogg
+  - aplikasi — aplikasi/json, aplikasi/pdf, aplikasi/xml, aplikasi/octet-stream
+### Sending Responses
+- **Content Types**
+- Misalnya, ketika klien mengakses sumber daya dengan id 23 di sumber artikel dengan Permintaan GET ini:
+  - GET/articles/23 HTTP/1.1
+  - Accept: text/html, application/xhtml
+- Server mungkin mengirim kembali konten dengan header respons:
+  - HTTP/1.1 200 (OK)
+  - Content-Type: text/html
+- **Response Codes**
+- HTTP status code adalah kode respons standar yang diberikan oleh server website di internet. Kode ini membantu mengidentifikasi penyebab masalah saat laman website atau sumber daya lain tidak dimuat dengan benar.
+- Contoh:
+  - 200 (OK): Ini adalah respons standar untuk permintaan HTTP yang berhasil.
+  - 201 (CREATED): Ini adalah respons standar untuk permintaan HTTP yang menghasilkan item yang berhasil dibuat.
+  - 204 (NO CONTENT): Ini adalah respons standar untuk permintaan HTTP yang berhasil, di mana tidak ada yang dikembalikan di badan respons.
+  - 400 (BAD REQUEST): Permintaan tidak dapat diproses karena sintaks permintaan yang buruk, ukuran yang berlebihan, atau kesalahan klien lainnya.
+  - 403 (FORBIDDEN): Klien tidak memiliki izin untuk mengakses sumber daya ini.
+  - 404 (NOT FOUND): Sumber daya tidak dapat ditemukan saat ini. Mungkin sudah dihapus, atau belum ada.
+  - 500 (Internal Server Error): HTTP status code ini adalah kode yang dikirimkan ketika server mengalami situasi yang tidak diketahui cara menanganinya.
 ## Intro & Essential Node JS
 - Tools
   - Visual Studio Code (code editor)
@@ -297,7 +339,263 @@ hello.get('/rodhi', (req, res) => {
   - Memodifikasi Object Request dan Object Response.
   - Menghentikan request-response cycle.
   - Melanjutkan ke middleware function selanjutnya atau ke handler function dalam suatu request response cycle.
-- Kemampuan Fungsi Middleware : Menjalankan Kode Apapun
+- **Kemampuan Fungsi Middleware : Menjalankan Kode Apapun**
   - Sebuah function middleware bisa digunakan untuk mengeksekusi kode apapun untuk suatu tujuan tertentu.
   - Sebagai contoh, kita akan membuat sebuah middleware function yang akan mencetak tulisan “Halo Skilvul, request diterima!” Ketika sebuah HTTP Request masuk kedalam middleware function ini. 
   - Middleware Function ini akan diberi nama dengan skilvulLogger.
+
+  ```
+  const express = require('express')
+  const app = express()
+
+  const skilvulLogger = function (req, res, next) {
+    console.log('Halo Semua, request diterima')
+    next()
+  }
+
+  app.use(skilvulLogger)
+
+  app.get('/', function (req, res) {
+    res.send('Hello Semua')
+  })
+
+  app.listen(3000)
+  ```
+- **Kemampuan Fungsi Middleware : Memodifikasi Object Request dan Object Response.**
+  - Sebuah function middleware bisa digunakan untuk memodifikasi Object Request dan Object Response.
+  - Sebagai contoh, kita akan membuat sebuah middleware function yang akan menambahkan informasi request time pada object request.
+  - Middleware Function ini akan diberi nama dengan addRequestTime.
+
+  ```
+  const express = require('express')
+  const app = express()
+
+  const addRequestTime = function (req, res, next) {
+    req.requestTime = Date.now()
+    next()
+  }
+
+  app.use(addRequestTime)
+
+  app.get('/', function (req, res) {
+    let responseText = 'Hello Semua!'
+    responseText += '<small>Requested at: ' + req.requestTime + '</small>'
+    res.send(responseText)
+  })
+
+  app.listen(3000)
+  ```
+
+- **Kemampuan Fungsi Middleware : Menghentikan Request-Response Cycle.**
+  - Sebuah function middleware bisa digunakan untuk menghentikan request-response cycle.
+  - Sebagai contoh, kita akan membuat sebuah middleware function yang akan menghentikan request-response cycle.
+  - Middleware Function ini akan diberi nama dengan stopHere.
+  - Request tidak akan pernah sampai ke handler function, karena middleware
+telah menghentikan request-response cycle dengan res.send() dan tidak memanggil next()
+  
+  ```
+  const stopHere = function(req, res, next) {
+    res.send('<p>request stop from middleware</p>')
+  }
+  ```
+
+- Jenis Express Middleware Berdasarkan Cara Penggunaan
+- Express Middleware dapat dikelompokkan berdasarkan dari dimana middleware function itu digunakan :
+  - Application Level Middleware
+  - Router Level Middleware
+  - Error Handling Middleware
+
+- Application Level Middleware
+  - Application Level Middleware adalah sebuh function middleware yang melekat ke instance object Application Express.
+  - Penggunaannya dengan cara memanggil method app.use().
+  - Application Level Middleware akan di jalankan setiap kali Express Application menerima sebuah HTTP Request.
+
+  ```
+  const addRequestTime = function(req, res, next) {
+    req.requestTime = Date.now()
+    next()
+  }
+
+  app.use(addRequestTime)
+  ```
+
+- Router Level Middleware
+  - Router Level Middleware adalah sebuh function middleware yang cara kerjanya sama persis dengan application level middleware, yang menjadikan perbedaan adalah middleware function ini melekat ke instance object Router Express.
+  - Penggunaannya dengan cara memanggil method express.Router().
+  - Router Level Middleware hanya akan di jalankan setiap kali sebuah Express Router yang menggunakan middleware ini menerima sebuah HTTP Request, sedangan pada Router yang lain tidak akan dijalankan.
+
+  ```
+  const express = require('express')
+  const UserRouter = express.Router()
+  const Adminrouter = express.Router()
+
+  const logUserAction = function (req, res, next) {
+    const username = req.body.username
+
+    console.log(`username ${username} access the API`)
+
+    next()
+  }
+
+  UserRouter.use(logUserAction)
+
+  UserRouter.get('/users', function (req, res) {
+    res.send('all user data!')
+  })
+
+  AdminRouter.get('/admins', function(req, res) {
+    res.send(`all admin data!`)
+  })
+
+  ```
+
+- Error Handling Middleware
+  - Error Handling mengacu kepada bagaimana cara sebuah Express Application menangkap dan memproses error yang terjadi, baik itu berupa kesalahan yang synchronous maupun asynchronous.
+  - Express Application sudah menyediakan error handle function default, sehingga kita tidak perlu lagi membuat sendiri functionnya.
+  - Error handle function default milik Express Application hanyalah kerangka functionnya saja, kita tetap harus menuliskan di dalam function ini bagaimana sebuah error akan di handle.
+  - Error Handling Middleware digunakan pada Application Level Middleware
+
+  ```
+  const express = require('express')
+  const app = express()
+
+  const errorHandling = function(req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+  }
+
+  app.use(errorHandling)
+  ```
+
+- **Jenis Express Middleware Berdasarkan Source Middleware Function**
+- Express Middleware dapat juga dikelompokkan berdasarkan dari dimana middleware function itu didapatkan :
+  - Express Build-in Middleware
+  - Third Party(custom) Middleware
+- **Jenis Express Middleware Berdasarkan Source Middleware Function : Express Build-in Middleware**
+- Express JS sudah menyediakan 3 buah build-in middleware function yang bisa digunakan :
+  - express.static()
+  - express.json()
+  - express.urlEncoded()
+- **express.static()**
+  - Adalah salah satu build-in middleware function yang disediakan oleh Express JS.
+  - Middleware function ini memungkinkan sebuah express application melayani asset statis berupa file, seperti file HTML, gambar, video, dokumen, dan sebagainya.
+  - Dokumentasi lengkap : 
+
+  ```
+  const options = {
+    dotfiles: 'ignore',
+    etag: false,
+    extensions: ['htm', 'html'],
+    index: false,
+    maxAge: 'Id',
+    redirect: false,
+    setHeaders: function (res, path, stat) {
+      res.set('x-timestamp', Date.now())
+    }
+  }
+
+  app.use(express.static('public'), options)
+  ```
+
+- **express.json()**
+  - Adalah salah satu build-in middleware function yang disediakan oleh Express JS.
+  - Middleware function ini memungkinkan sebuah express application menerima HTTP Request yang membawa payload (data) dalam format JSON.
+  - Middleware function ini tersedia di Express JS versi 4.16.0+
+
+  ```
+  const express = require('express')
+  const app = express ()
+
+  app.use(res.json())
+  ```
+
+- **express.urlEncoded()**
+  - Adalah salah satu build-in middleware function yang disediakan oleh Express JS.
+  - Middleware function ini memungkinkan sebuah express application menerima HTTP Request yang membawa payload (data) dalam format urlencoded.
+  - Middleware function ini tersedia di Express JS versi 4.16.0+
+
+  ```
+  const express = require('express')
+  const app = express()
+
+  app.use(res.urlEncoded())
+  ```
+- Express Third Party (custom) Middleware
+- Membuat custom middleware function atau menggunakan third party middleware function dapat menambahkan fungsionalitas dari sebuah Express Application.
+- Berikut adalah contoh third party middleware yang dikelola oleh Express JS Team :
+  - cors
+  - body-parser
+  - errorhandling
+  - morgan
+  - Multer
+
+## Design Database
+### Apa itu Database
+- Database atau Basis Data adalah kumpulan data yang saling sinkron (tanpa redundancy) yang disimpan secara bersama-sama yang dapat diakses secara elektronik dari suatu sistem.
+### Apa itu RDBMS
+- RDBMS atau Relational Database Management System adalah sebuah system yang dirancang khusus untuk management database agar tersusun dan terintegrasi.
+- karena system inilah yang memungkinkan user mengelola database, mulai dari membuat database, membaca isi database, mengubah isi database dan menghapus isi database atau CRUD
+  - Create
+  - Read
+  - Update
+  - Delete
+### Jenis-jenis Database
+- Terdapat beberapa jenis database yang populer dan banyak dipakai diantaranya adalah:
+  - Oracle
+  - MySQL
+  - Microsoft SQL Server
+  - PostgreSQL
+  - MongoDB
+  - ElasticSearch
+  - Redis
+  - SQLite
+### Relasi antar tabel 
+
+- Relasi adalah istilah dalam relational database (tabel) yang mengacu ke bagaimana tabel dalam database itu bisa saling terkait. dalam pembuatan relasi database itu dihubungkan dengan Foreign Key pada kolom tabel A dan Primary Key pada kolom tabel B.
+- Istilah-istilah relasi antar tabel
+  - Primary Key
+  - Foreign Key
+- **Primary Key** merupakan kunci utama pada field tertentu dalam sebuah tabel yang biasa digunakan untuk mendefinisikan rows data tertentu.
+- **Foreign Key** adalah atribut pada tabel yang menunjukan hubungan (relasi) ke tabel induk ( yang mempunyai primary key).
+### Jenis-jenis Relasi Antar Tabel di Database
+- terdapat pembagian jenis relasi database diantaranya
+  - One To One Field
+  - One To Many
+  - Many To Many 
+- **One to One Field** merupakan relasi dari saru baris tabel A ke sau baris ke tabel B
+- **One to Many** adalah relasi dimana satu baris tabel (tabel A) dihubungkan ke satu baris atau lebih (Tabel B).
+- **Many To Many** adalah relasi yang dimana lebih dari satu baris (tabel A) dihubungkan di lebih dari satu baris (tabel B).
+## Normalisasi Basis Data
+### Apa itu Normalisasi Database?
+- **Normalisasi** merupakan sebuah teknik logical desain dalam sebuah basis data yang mengelompokkan atribut dari berbagai entitas dalam suatu relasi sehingga membentuk struktur relasi yang baik (tanpa redudansi/pengulangan data) serta sebagian besar ambiguity bisa dihilangkan.
+### Tujuan Normalisasi Database
+- Jika data dalam database tersebut belum di normalisasi maka akan terjadi 3 kemungkinan yang akan merugikan sistem secara keseluruhan.
+  - **Insert Anomali**: Situasi dimana tidak memungkinkan memasukkan beberapa jenis data secara langsung di database.
+  - **Delete Anomali**: Penghapusan data yang tidak sesuai dengan yang diharapkan, artinya data yang harusnya tidak terhapus mungkin ikut terhapus.
+  - **Update Anomali**: Situasi dimana nilai yang diubah menyebabkan inkonsistensi database, dalam artian data yang diubah tidak sesuai dengan yang diperintahkan atau yang diinginkan.
+### Database Seperti Apa yang dinormalisasi?
+- Tidak semua database bisa dinormalisasi, hanya tipe “relational database“ yang bisa dinormalisasi. Banyak vendor DBMS (Database Management System) diantaranya Oracle, MySQL, SQL Server, PostgreSQL, dll.
+### Tahapan Normalisasi Database
+- Untuk melakukan normalisasi database kita harus mengidentifikasi data seperti apa yang akan disimpan, dan berikut adalah contohnya:
+- **Bentuk Tidak Normal (Unnormalize)**: Bentuk tidak normal (unnormalized) merupakan kumpulan data yang direkam tidak ada keharusan dengan mengikuti suatu format tertentu.
+- **1NF / First Normal Form**: 1NF mensyaratkan beberapa kondisi dalam sebuah database, berikut adalah fungsi dari bentuk normal pertama ini.
+  - Menghilangkan duplikasi kolom dari tabel yang sama.
+  - Buat tabel terpisah untuk masing-masing kelompok data terkait dan mengidentifikasi setiap baris dengan kolom yang unik (primary key).
+- **2NF**: Syarat untuk menerapkan normalisasi bentuk kedua ini adalah data telah dibentuk dalam 1NF, berikut adalah beberapa fungsi normalisasi 2NF.
+  - Menghapus beberapa subset data yang ada pada tabel dan menempatkan mereka pada tabel terpisah.
+  - Menciptakan hubungan antara tabel baru dan tabel lama dengan menciptakan foreign key.
+  - Tidak ada atribut dalam tabel yang secara fungsional bergantung pada candidate key tabel tersebut.
+- **3NF**: Pada 3NF tidak diperkenankan adanya partial “transitive dependency“ dalam sebuah tabel. Transitive dependency biasanya terjadi pada tabel hasil relasi, atau kondisi dimana terdapat tiga atribut A, B, C. Kondisinya adalah A ⇒ B dan B ⇒ C. Maka C dikatakan sebagai transitive dependency terhadap A melalui B.
+- **BCNF Boyce-Codd normal form** Merupakan sebuah teknik normalisasi database yang sering disebut 3.5NF, memiliki hubungan yang sangat erat dengan bentuk 3NF. Pada dasarnya adalah untuk menghandle anomali dan overlooping yang tidak dapat di handle dalam bentuk 3NF.
+- Untuk tabel untuk memenuhi Bentuk Normal Boyce-Codd, harus memenuhi dua kondisi berikut:
+  - yaitu Table harus dalam Bentuk Normal Ketiga.
+  - Dan, untuk ketergantungan apa pun A → B, A harus menjadi super key.
+### Pentingnya Normalisasi
+- Suatu rancangan database disebut buruk jika :
+  - Data yang sama tersimpan di beberapa tempat (file atau record).
+  - Ketidakmampuan untuk menghasilkan informasi tertentu.
+  - Terjadi kehilangan informasi.
+  - Terjadi adanya redudansi (pengulangan) atau duplikasi data sehingga memboroskan ruang penyimpanan dan menyulitkan saat proses updating data.
+  - Timbul adanya NULL VALUE..
+  - Kehilangan informasi bisa terjadi bila pada waktu merancang database (melakukan proses dekomposisi yang keliru).
+  - Bentuk normalisasi yang sering digunakan adalah 1st NF, 2nd NF, 3rd NF,dan BCNF.
