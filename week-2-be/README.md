@@ -56,17 +56,86 @@ Column data_type1 PRIMARY KEY
   - ```DROP DATABASES bookstore;``` digunakan untuk menghapus / menghilangkan database yang dipilih dari MySQL kita.
 - **Table Command**
   - ```SHOW TABLES;``` digunakan untuk melihat semua isi table di database.
-  - 
+  - Kita membuat table baru di database tersebut dengan nama “books”. Sintaks yang dibuat menggunakan CREATE TABLE [name] dan memberikan definisi tiap kolom di table tersebut.
+
   ``` 
   CREATE TABLE books (
     id INT (10) AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     description TEXT,
-    place_sell CHAR (3),
+    price INT DEFAULT (0),
     stock INT DEFAULT(0),
     creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   );
   ```
+  - ```DROP TABLES books;``` digunakan untuk menghapus table yang diinginkan jika ingin dihapus.
+  - Ketika ingin menambah atau menghilangkap kolom di table yang dipilih, kita bisa menggunakan ALTER dan menggunakan ADD untuk menambah kolom atau DROP COLUMN untuk menghapus kolom seperti contoh diatas.
+  ```
+  ALTER TABLE books
+  ADD price INT,
+    status ENUM ('available', 'out of stock', 'limited');
+  
+  ALTER TABLE books
+  DROP COLUMN place_shell;
+  ```
+- **INSERT INTO**: Ketika ingin menambah lebih dari 1 atau multiple kita dapat menggunakan query INSERT INTO lebih dari 1 assign values
+```
+INSERT INTO books (id, title, description, price, stock, creation_date) VALUES (1, 'JavaScript Dasar', 'buku ini adalah bahasa pemrograman JavaScript', 150000, 50, '2022-11-07');
+```
+- **SELECT** 
+  - ```SELECT * FROM books;``` digunakan untuk melakukan query melihat isi seluruh data di table yang dipilih
+  - ```SELECT id, title``` dapat melakukan query untuk beberapa kolom yang ingin dilihat seperti query diatas, jadi kita ingin melihat id, title di table books.
+  - ```SELECT id AS ID, title AS judul FROM books``` dapat menggunakan alias / AS untuk menggunakan mengubah nama kolom agar output kolomnya sesuai dengan yang kita inginkan
+- **WHERE** 
+  - Query WHERE digunakan untuk mencari data dengan kondisi tertentu dengan command WHERE [column_name] = condition. 
+  - Kita juga dapat menggunakan WHERE lebih dari 1 parameter kondisi menggunakan IN.
+- **AND, OR, NOT** 
+  - Kita juga bisa mengkolaborasikan WHERE menggunakan kondisi lebih dari  1 menggunakan AND, OR dan NOT. Contoh dibawah kita menggunakan AND untuk mencari kondisi id = 1 dan title = ‘PHP’ maka kita akan memunculkan row dengan 2 kondisi tersebut.
+  ``` 
+  SELECT * FROM books WHERE id = 1 and title = 'PHP';
+  ```
+  - Kita dapat menggunakan OR untuk mencari query dengan kondisi salah satu. Contoh dibawah kita akan mencari row dengan kondisi id = 1 atau title = ‘PHP’. Maka kita akan muncul 2 row dengan salah satu kondisi yang di declare.
+  ```
+  SELECT * FROM books WHERE id = 1 OR title = 'PHP';
+  ```
+  - Dan yang terakhir kita dapat menggunakan NOT untuk mencari query yang tidak ada dalam kondisi yang di definisikan. Contoh dibawah kita mencari query yang tidak mengandung id = 1, maka muncul 3 data dengan id yang tidak sama dengan 1.
+  ```
+  SELECT * FROM books WHERE NOT id = 1;
+  ```
+- **ORDER BY**
+  - Terdapat command yang bisa kita gunakan untuk melakukan ordering menggunakan ORDER BY dengan menggunakan 2 kondisi yaitu ASC dan DESC. Struktur commandnya adalah ORDER BY [column_name] ASC / DESC.
+  ```
+  SELECT * FROM books WHERE NOT id = 1 ORDER BY id DESC;
+
+  SELECT * FROM books WHERE NOT id = 1 ORDER BY id ASC;
+  ```
+- **LIMIT** digunakan untuk membatasi berapa query yang akan dimunculkan dengan urutan dari atas. Contoh dibawah adalah query dan memunculkan hanya 2 data.
+```
+SELECT * FROM books LIMIT 2;
+```
+- **UPDATE** digunakan untuk melakukan perbaruan data di table.
+```
+UPDATE books
+SET id=1, title='Java'
+WHERE id =1
+```
+- **DELETE** digunakan untuk melakukan penghapusan data. Contoh dibawah kita melakukan penghapusan data di id = 1
+```
+DELETE FROM books 
+WHERE id = 4;
+```
+## MySQL Lanjutan
+### Tools
+- Terminal
+- DBeaver
+### Relations di SQL
+- **One to Many**
+  - Paling Sering Digunakan
+  - Satu baris dalam tabel dapat memiliki beberapa baris di table relasinya
+  ![One To Many](/week-2-be/onetomany.jpg)
+
+
+
      
 
 
