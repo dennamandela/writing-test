@@ -132,14 +132,20 @@ WHERE id = 4;
 - **One to Many**
   - Paling Sering Digunakan
   - Satu baris dalam tabel dapat memiliki beberapa baris di table relasinya
+  
   ![One To Many](/week-7/onetomany.jpg)
+
 - **Many to Many**
   - Digunakan ketika kedua tabel yang berelasi dapat memiliki beberapa baris di tabel relasinya.
+
   ![Many to Many](/week-7/many-to-many.png)
+
 - **One to One**
   - Sangat jarang digunakan
   - Diimplementasikan dengan cara yang sama seperti One to Many tetapi dengan kondisi tambahan (foreign key merupakan primary key)
+
   ![One to One](/week-7/notasi-relasi-one-to-one.png)
+
 ### Database Normalization
 - **Database Normalization**
 Merupakan teknik analisis data yang mengorganisasikan atribut-atribut data dengan cara mengelompokkan sehingga terbentuk entitas yang non-redundant, stabil, dan fleksible.
