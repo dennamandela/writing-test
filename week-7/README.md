@@ -132,7 +132,7 @@ WHERE id = 4;
 - **One to Many**
   - Paling Sering Digunakan
   - Satu baris dalam tabel dapat memiliki beberapa baris di table relasinya
-  
+
   ![One To Many](/week-7/onetomany.jpg)
 
 - **Many to Many**
@@ -300,7 +300,9 @@ Merupakan teknik analisis data yang mengorganisasikan atribut-atribut data denga
 ## Authentication & Authorization
 ### Authentication
 - Authentication adalah proses dimana seorang user (melalui berbagai macam akses fisik berupa komputer , melalui jaringan , atau melalui remote access ) mendapatkan hak akses kepada suatu entity (dalam hal ini jaringan suatu corporate).
+
 ![Authentication](/week-7/1_lH8l0qjavg9eMKadijsufQ.gif)
+
 - Metode authentication yang berbasis pada kerahasiaan informasi adalah:
   - Password/PIN: Hanya pemiliknya yang tahu password/pin.
   - Digital Certificate: Berbasis pada asymmetric cryptography yang mengandung informasi rahasia yaitu private key.
@@ -310,7 +312,9 @@ Merupakan teknik analisis data yang mengorganisasikan atribut-atribut data denga
   - Fingerprint: Tidak mungkin ada 2 orang yang sidik jarinya sama.
   - Paspor: Hanya pemiliknya yang bisa menunjukkan foto di paspor sesuai dengan wajahnya.
   - Tandatangan: Hanya pemiliknya yang bisa menuliskan tandatangan dengan sempurna. 
+
 ![Auth](/week-7/1_ynx8R7wDlW9b8OE_iGA-4w.png)
+
 ### Session Based Authentication
 - Pada session based authentication, server akan membuat session untuk user setelah user log in. Session id akan disimpan di dalam cookie pada browser yang digunakan user.
 ### Token Based Authentication
@@ -318,13 +322,17 @@ Merupakan teknik analisis data yang mengorganisasikan atribut-atribut data denga
 ### Authorization
 - Authorization adalah proses penentuan apakah user tersebut diijinkan / ditolak untuk melakukan satu atau beberapa action atau akses terhadap resources tertentu dalam system.
 - Logikanya adalah tanpa mengetahui siapa anda, saya tidak tahu apa saja yang boleh dan tidak boleh untuk anda. Jadi tanpa authentication tidak ada authorization. Biasanya pengguna yang tidak ter-otentikasi (anonymous guest) tetap bisa menikmati layanan, namun dengan akses yang sangat terbatas.
+
 ![Authorization](/week-7/1_hqDq0Y1Vcwz8Mh_wJoVcGQ.png)
+
 ## Sequelize 
 ### Apa itu Sequelize?
 - Sequelize adalah ORM (Object Relational Mapping) Node JS yang berbasis promise. Sequelize mendukung sebagian besar relational Database seperti MySQL, PostgresQL, MariaDB, SQLite dan Miscrosoft SQL Server.
 ### Apa itu ORM?
 - ORM adalah suatu metode/teknik pemrograman yang digunakan untuk mengkonversi data dari lingkungan bahasa pemrograman berorientasi objek (OOP) dengan lingkungan database relational.
+
 ![ORM](/week-7/orm.jpg)
+
 ### Installation Sequelize
 - Install Sequelize-cli
 ```
