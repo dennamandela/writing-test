@@ -111,6 +111,7 @@ app.get('/users/:id', (req, res) => {
 })
 ```
 - Dengan kode dibawah kita akan menghapus satu data berdasarkan ID dengan menggunakan deleteOne().
+```
 app.delete('/users/:id', (req, res) => {
   User.deleteOne({
     _id : req.params.id
@@ -126,8 +127,57 @@ app.delete('/users/:id', (req, res) => {
     }
   })
 });
+```
 ### Populate
 - **Populate** adalah proses penggabungan 2 collection atau lebih menjadi satu objek JSON.
+## Docker
+### Apa itu Docker ?
+- Docker adalah software yang menjalankan suatu aplikasi menggunakan container.
+- Docker men-sharing kernel dari host OS, serta meng-container-kan suatu aplikasi agar dapat dijalankan dimana saja dan kapan saja.
+- Docker berfungsi sebagai penyedia layanan virtual bagi aplikasi yg diinstall pada sebuah host. Docker akan menyediakan hal-hal yang diperlukan untuk aplikasi mulai dari akses file, koneksi internet, hingga port agar aplikasi dapat berjalan dengan mulus
+### Container vs Virtual Machine
+
+![Container vs Virtual Machine](/week-8/img/containers-vs-virtual-machines.jpg)
+
+- VM memakan banyak resource dan waktu utk booting karena melakukan virtualisasi pada host hardware-nya. Sedangkan container kebalikannya dari vm, container melakukan virtualisasi pada host OS-nya.
+### Docker Fundamental
+
+![Docker](/week-8/img/1_zfeWRiR39GiGKh_OZKJEgg.png)
+
+- Docker File: Blueprint untuk membuat image
+- Image: Template untuk menjalankan container
+- Container: Perwujudan dari Image
+- Docker Registry: Tempat untuk upload/download image
+
+### Instalasi Docker
+- https://docs.docker.com/get-docker/
+
+### Perintah Dasar
+- docker pull: Download image dari docker hub
+- docker images: Melihat kumpulan images yang sudah terdownload
+- docker run: Menjalankan container
+- docker ps: Melihat container yang berjalan
+### Docker File
+- Merupakan sebuah blueprint untuk membuat image, kamu juga bisa membuat custom image menggunakan docker file.
+- Caranya:
+  - Buat file Dockerfile di dalam project yang kamu buat
+  - Tulis beberapa perintah ke dalam dockerfile
+  - Jalankan docker file menggunakan perintah 
+    - docker build -t NAMA_IMAGES:TAG . 
+    - docker build -t my-app:1.0 
+### Docker Compose
+- Cara untuk menjalankan lebih dari 1 container secara bersamaan dan saling terhubung.
+- Caranya:
+  - Buat file NAMA_FILE.yaml di dalam project yang kamu buat
+  - Tulis beberapa perintah ke dalam sana
+  - Jalankan menggunakan perintah 
+    - docker-compose NAMA_FILE.yaml up
+
+
+
+
+
+
 
 
 
